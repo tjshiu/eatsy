@@ -5,7 +5,6 @@ import NavBarContainer from "./fixed/nav_bar_container";
 const App = () => (
   <div>
     <NavBarContainer />
-    <h1>Eatsy!!!!!!!!!</h1>
   </div>
 );
 
