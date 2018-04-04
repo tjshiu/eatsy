@@ -4,7 +4,7 @@ import NavBar from "./nav_bar";
 import { logout } from "../../actions/session_actions";
 
 const mapStateToProps = (state, ownProps) => ({
-  currentUser: state.currentUser
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({

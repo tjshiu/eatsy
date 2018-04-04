@@ -21,7 +21,7 @@ class NavBar extends React.Component {
   personalGreeting() {
     return (
       <hgroup className="header-group>">
-        <h2 className="header-name">Hi, {this.props.currentUser}</h2>
+        <h2 className="header-name">Hi, {this.props.currentUser.username}</h2>
         <button className="header-button" onClick={this.props.logout}>
           Log Out
         </button>
