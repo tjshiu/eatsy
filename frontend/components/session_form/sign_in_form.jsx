@@ -41,9 +41,10 @@ class SignInForm extends React.Component {
   render() {
     return (
       <div className="login-form-container">
+        {this.props.otherForm}
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <h1>Welcome to Eatsy!</h1>
-          <h2>{this.props.formType}</h2> or {this.props.otherForm}
+          <h2>{this.props.formType}</h2>
           <br />
           <div onClick={this.props.closeModal} className="close-x">
             X
