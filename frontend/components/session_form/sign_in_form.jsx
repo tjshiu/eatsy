@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 
-class SessionForm extends React.Component {
+class SignInForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,12 +34,16 @@ class SessionForm extends React.Component {
     );
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   render() {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <h1>Welcome to Eatsy!</h1>
-          Please {this.props.formType} or {this.props.navLink}
+          <h2>{this.props.formType} </h2>
           <div>{this.renderErrors()}</div>
           <div className="login-form">
             <br />
@@ -56,7 +60,7 @@ class SessionForm extends React.Component {
             <label>
               Password:
               <input
-                type="text"
+                type="password"
                 value={this.state.password}
                 onChange={this.update("password")}
                 className="login-input"
@@ -75,4 +79,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default withRouter(SessionForm);
+export default withRouter(SignInForm);

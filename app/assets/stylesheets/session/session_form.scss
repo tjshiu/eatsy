@@ -1,16 +1,12 @@
 
 .session-form {
-  margin: 0px;
   display: flex;
   justify-content: center;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-  position: relative;
 }
 
 .login-form-container {
+  border: 1px solid black;
+  padding: 50px;
 }
 
 .login-form-box {

@@ -2,7 +2,7 @@ class User < ApplicationRecord
   validates :username, :email, :password_digest, :session_token, :image_url, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :username, :email, :session_token, uniqueness: true
-  after_initialize :ensure_session_token
+  after_initialize :ensure_session_token, :ensure_image_url
 
   attr_reader :password
 
@@ -23,6 +23,10 @@ class User < ApplicationRecord
 
   def ensure_session_token
     self.session_token ||= SecureRandom.urlsafe_base64(16)
+  end
+
+  def ensure_image_url
+    self.image_url ||= "default_image_url"
   end
 
   def reset_session_token!

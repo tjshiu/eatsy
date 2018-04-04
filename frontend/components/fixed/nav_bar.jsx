@@ -34,6 +34,7 @@ class NavBar extends React.Component {
       : this.sessionLinks();
   }
 
+
   render() {
     return (
       <nav className="NavBar">
