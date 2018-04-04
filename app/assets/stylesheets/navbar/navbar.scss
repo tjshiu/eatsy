@@ -1,0 +1,44 @@
+@import "base/global.scss";
+
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+
+.NavBarLeft {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.NavBarRight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+}
+
+.Logo {
+  padding-left: 20px;
+  padding-right: 30px;
+  font-size: 30px;
+  color: $orange;
+}
+
+.sessionbuttons {
+  display: flex;
+  justify-content: space-between;
+  width: 190px;
+}
+
+.SignIn, .Register {
+  text-decoration: none;
+  color: $orange;
+  padding: 10px;
+  border: 1px solid $orange;
+  border-radius: 10px;
+}

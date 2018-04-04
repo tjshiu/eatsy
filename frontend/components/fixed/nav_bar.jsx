@@ -10,10 +10,9 @@ class NavBar extends React.Component {
 
   sessionLinks() {
     return (
-      <div>
-        <Link to="/signin">Sign In</Link>
-        <br />
-        <Link to="/register">Register</Link>
+      <div className="sessionbuttons">
+        <Link to="/signin" className='SignIn'>Sign In</Link>
+        <Link to="/register" className="Register">Register</Link>
       </div>
     );
   }
@@ -38,12 +37,16 @@ class NavBar extends React.Component {
   render() {
     return (
       <nav className="NavBar">
-        <h1>Eatsy</h1>
-        <h3>Search</h3>
-        <h3>Demo</h3>
-        <h3>Sell on Eatsy</h3>
-        <div>{this.Greeting()}</div>
-        <h3>Cart</h3>
+        <div className="NavBarLeft">
+          <h1 className="Logo">Eatsy</h1>
+          <h3>Search</h3>
+        </div>
+        <div className="NavBarRight">
+          <h3>Demo</h3>
+          <h3>Sell on Eatsy</h3>
+          {this.Greeting()}
+          <h3>Cart</h3>
+        </div>
       </nav>
     );
   }

@@ -9,9 +9,10 @@ const App = () => (
     <header>
       <NavBarContainer />
     </header>
-
+    <div className='session-form'>
     <Route path="/signin" component={SignInFormContainer} />
     <Route path="/register" component={RegisterFormContainer} />
+    </div>
   </div>
 );
 
