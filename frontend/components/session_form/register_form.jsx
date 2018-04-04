@@ -44,7 +44,11 @@ class RegisterForm extends React.Component {
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <h1>Welcome to Eatsy!</h1>
-          <h2>{this.props.formType}</h2>
+          <h2>{this.props.formType}</h2> or {this.props.otherForm}
+          <br />
+          <div onClick={this.props.closeModal} className="close-x">
+            X
+          </div>
           <div>{this.renderErrors()}</div>
           <div className="login-form">
             <br />

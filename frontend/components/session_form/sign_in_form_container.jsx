@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import React from "react";
 import { Link } from "react-router-dom";
 import { signIn, receiveErrors } from "../../actions/session_actions";
+import { openModal, closeModal } from "../../actions/modal_actions";
 import SignInForm from "./sign_in_form";
 
 const mapStateToProps = ({ errors }) => {
@@ -14,7 +15,11 @@ const mapStateToProps = ({ errors }) => {
 const mapDispatchToProps = dispatch => {
   return {
     processForm: user => dispatch(signIn(user)),
-    clearErrors: () => dispatch(receiveErrors([]))
+    clearErrors: () => dispatch(receiveErrors([])),
+    otherForm: (
+      <button onClick={() => dispatch(openModal("register"))}>Register</button>
+    ),
+    closeModal: () => dispatch(closeModal())
   };
 };
 

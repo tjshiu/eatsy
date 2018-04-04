@@ -6,13 +6,24 @@ class NavBar extends React.Component {
     super(props);
     this.personalGreeting = this.personalGreeting.bind(this);
     this.Greeting = this.Greeting.bind(this);
+    this.sessionLinks = this.sessionLinks.bind(this);
   }
 
   sessionLinks() {
     return (
       <div className="sessionbuttons">
-        <Link to="/signin" className='SignIn'>Sign In</Link>
-        <Link to="/register" className="Register">Register</Link>
+        <button
+          className="SignIn"
+          onClick={() => this.props.openModal("signin")}
+        >
+          Sign In
+        </button>
+        <button
+          className="Register"
+          onClick={() => this.props.openModal("register")}
+        >
+          Register
+        </button>
       </div>
     );
   }
@@ -34,12 +45,13 @@ class NavBar extends React.Component {
       : this.sessionLinks();
   }
 
-
   render() {
     return (
       <nav className="NavBar">
         <div className="NavBarLeft">
-          <h1 className="Logo">Eatsy</h1>
+          <Link to="/" className="header-link">
+            <h1 className="Logo">Eatsy</h1>
+          </Link>
           <h3>Search</h3>
         </div>
         <div className="NavBarRight">
