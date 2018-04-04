@@ -7,7 +7,7 @@ export const signIn = user =>
 export const register = user =>
   $.ajax({
     method: "POST",
-    url: "/api/user",
+    url: "/api/users",
     data: { user }
   });
 export const logout = () =>
