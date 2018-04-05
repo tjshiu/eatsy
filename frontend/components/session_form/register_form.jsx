@@ -44,9 +44,6 @@ class RegisterForm extends React.Component {
     return (
       <div className="login-form-container">
         {this.props.otherForm}
-        <button onClick={this.props.closeModal} className="close-x">
-          X
-        </button>
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <h1>Welcome to Eatsy!</h1>
           <h2>{this.props.formType}</h2>
@@ -56,6 +53,7 @@ class RegisterForm extends React.Component {
             <br />
             <label>
               Username:
+              <br />
               <input
                 type="text"
                 value={this.state.username}
@@ -65,7 +63,8 @@ class RegisterForm extends React.Component {
             </label>
             <br />
             <label>
-              Email:
+              Email
+              <br />
               <input
                 type="text"
                 value={this.state.email}
@@ -75,7 +74,8 @@ class RegisterForm extends React.Component {
             </label>
             <br />
             <label>
-              Password:
+              Password
+              <br />
               <input
                 type="password"
                 value={this.state.password}

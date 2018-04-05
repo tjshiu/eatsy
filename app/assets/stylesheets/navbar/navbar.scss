@@ -12,12 +12,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid lightgrey;
 }
 
 .header-name {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 15px;
   color: $orange;
 }
 
@@ -31,19 +31,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-width: 600px;
 }
 
 .Logo {
-  padding-left: 20px;
+  padding-left: 30px;
+  margin-left: 200px;
   padding-right: 30px;
-  font-size: 30px;
+  font-size: 40px;
   color: $orange;
-}
-.header-group {
-  display: flex;
-  justify-content: space-between;
-  width: 300px;
-  align-items: center;
+  font-family: 'Merriweather', serif;
 }
 
 .sessionbuttons .header-group{
@@ -51,32 +48,52 @@ header {
   justify-content: space-between;
   width: 100px;
 }
+
 .Register {
-    font-size: 20px;
-    color: $orange;
-    border: 0px;
-    background-color: white;
+  font-size: 14px;
+  color: $orange;
+  background-color: white;
+  border: 0px;
+  margin: 10px;
+}
+
+.Register:hover {
+  cursor: pointer;
+  margin: 10px;
 }
 
 .SignIn, .logout{
-  font-size: 20px;
+  font-size: 14px;
   color: $orange;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   border: 1px solid $orange;
-  border-radius: 10px;
+  border-radius: 5px;
+  margin: 10px;
 }
 
-.logout:hover{
+.logout:hover, .SignIn:hover{
   color: white;
   background-color: $orange;
+  cursor: pointer;
 }
 
-.SignIn:hover {
-  color: white;
-  background-color: $orange;
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
 }
 
 .fa {
-  font-size: 30px;
-  margin-right: 20px;
+  font-size: 20px;
+  margin-right: 230px;
+  margin-left: 10px;
+}
+
+.cart-label {
+  color: grey;
+  margin-left: 10px;
 }

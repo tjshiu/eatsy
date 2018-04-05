@@ -25,7 +25,7 @@ class NavBar extends React.Component {
           Sign In
         </button>
         <button className="SignIn" onClick={() => this.props.loginDemo()}>
-          DEMO
+          Demo
         </button>
       </React.Fragment>
     );
@@ -58,9 +58,12 @@ class NavBar extends React.Component {
           <h3>Search</h3>
         </div>
         <div className="NavBarRight">
-          <h3>Sell on Eatsy</h3>
+          <h3 className='Register'>Sell on Eatsy</h3>
           {this.Greeting()}
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <div class='cart'>
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <div class='cart-label'>Cart</div>
+          </div>
         </div>
       </nav>
     );
