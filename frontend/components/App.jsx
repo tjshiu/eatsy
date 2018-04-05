@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import NavBarContainer from "./fixed/nav_bar_container";
 import Modal from "./modal/modal";
 import Homepage from "./homepage/homepage";
@@ -10,7 +10,10 @@ const App = () => (
     <header>
       <NavBarContainer />
     </header>
-    <Route path="/" component={Homepage} />
+    <Switch>
+      <Route path="/" component={Homepage} />
+      <Route component={Homepage}/>
+    </Switch>
   </div>
 );
 
