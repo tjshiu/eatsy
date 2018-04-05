@@ -9,12 +9,13 @@ class SignInForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
   }
 
   update(field) {
     return e =>
       this.setState({
-        [field]: e.currentTarget.value
+        [field]: e.target.value
       });
   }
 
