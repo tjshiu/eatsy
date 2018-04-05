@@ -11,31 +11,34 @@ class NavBar extends React.Component {
 
   sessionLinks() {
     return (
-      <div className="sessionbuttons">
+      <React.Fragment>
+        <button
+          className="Register"
+          onClick={() => this.props.openModal("register")}
+          >
+          Register
+        </button>
         <button
           className="SignIn"
           onClick={() => this.props.openModal("signin")}
         >
           Sign In
         </button>
-        <button
-          className="Register"
-          onClick={() => this.props.openModal("register")}
-        >
-          Register
+        <button className="SignIn" onClick={() => this.props.loginDemo()}>
+          DEMO
         </button>
-      </div>
+      </React.Fragment>
     );
   }
 
   personalGreeting() {
     return (
-      <hgroup className="header-group>">
-        <h2 className="header-name">Hi, {this.props.currentUser.username}</h2>
-        <button className="header-button" onClick={this.props.logout}>
+      <React.Fragment>
+        <h2 className="header-name">Hi, {this.props.currentUser.username}!</h2>
+        <button className="logout" onClick={this.props.logout}>
           Log Out
         </button>
-      </hgroup>
+      </React.Fragment>
     );
   }
 
@@ -55,10 +58,9 @@ class NavBar extends React.Component {
           <h3>Search</h3>
         </div>
         <div className="NavBarRight">
-          <h3>Demo</h3>
           <h3>Sell on Eatsy</h3>
           {this.Greeting()}
-          <h3>Cart</h3>
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
         </div>
       </nav>
     );

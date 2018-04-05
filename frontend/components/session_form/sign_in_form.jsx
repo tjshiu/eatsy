@@ -43,13 +43,13 @@ class SignInForm extends React.Component {
     return (
       <div className="login-form-container">
         {this.props.otherForm}
+        <button onClick={this.props.closeModal} className="close-x">
+          X
+        </button>
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <h1>Welcome to Eatsy!</h1>
           <h2>{this.props.formType}</h2>
           <br />
-          <div onClick={this.props.closeModal} className="close-x">
-            X
-          </div>
           <div>{this.renderErrors()}</div>
           <div className="login-form">
             <br />

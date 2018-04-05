@@ -15,18 +15,22 @@ header {
   border-bottom: 1px solid black;
 }
 
+.header-name {
+  font-weight: bold;
+  font-size: 20px;
+  color: $orange;
+}
 
 .NavBarLeft {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  width: 500px;
 }
 
 .NavBarRight {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 500px;
 }
 
 .Logo {
@@ -35,17 +39,44 @@ header {
   font-size: 30px;
   color: $orange;
 }
-
-.sessionbuttons {
+.header-group {
   display: flex;
   justify-content: space-between;
-  width: 190px;
+  width: 300px;
+  align-items: center;
 }
 
-.SignIn, .Register {
-  text-decoration: none;
+.sessionbuttons .header-group{
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+.Register {
+    font-size: 20px;
+    color: $orange;
+    border: 0px;
+    background-color: white;
+}
+
+.SignIn, .logout{
+  font-size: 20px;
   color: $orange;
   padding: 10px;
   border: 1px solid $orange;
   border-radius: 10px;
+}
+
+.logout:hover{
+  color: white;
+  background-color: $orange;
+}
+
+.SignIn:hover {
+  color: white;
+  background-color: $orange;
+}
+
+.fa {
+  font-size: 30px;
+  margin-right: 20px;
 }
