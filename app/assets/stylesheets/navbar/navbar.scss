@@ -16,7 +16,6 @@ header {
 }
 
 .header-name {
-  font-weight: bold;
   font-size: 15px;
   color: $orange;
 }
@@ -75,8 +74,7 @@ header {
 }
 
 .logout:hover, .SignIn:hover{
-  color: white;
-  background-color: $orange;
+  background-color: $lightorange;
   cursor: pointer;
 }
 

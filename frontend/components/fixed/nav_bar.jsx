@@ -60,9 +60,9 @@ class NavBar extends React.Component {
         <div className="NavBarRight">
           <h3 className='Register'>Sell on Eatsy</h3>
           {this.Greeting()}
-          <div class='cart'>
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            <div class='cart-label'>Cart</div>
+          <div className='cart'>
+            <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+            <div className='cart-label'>Cart</div>
           </div>
         </div>
       </nav>
