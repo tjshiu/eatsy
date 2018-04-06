@@ -1,8 +1,10 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
+import { ProtectedRoute } from "../util/route_util";
 import NavBarContainer from "./fixed/nav_bar_container";
 import Modal from "./modal/modal";
 import Homepage from "./homepage/homepage";
+import CreateProductContainer from "./products/create_product_form_container";
 
 const App = () => (
   <div>
@@ -11,6 +13,7 @@ const App = () => (
       <NavBarContainer />
     </header>
     <Switch>
+      <ProtectedRoute exact path="/products/new" component={CreateProductContainer} />
       <Route path="/" component={Homepage} />
       <Route component={Homepage} />
     </Switch>
