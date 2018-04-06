@@ -4,12 +4,11 @@ import Slider from "react-slick";
 class SimpleSlider extends React.Component {
   render() {
     var settings = {
-      pauseOnHover: false,
+      dots: true,
       infinite: true,
       speed: 1200,
       slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true
+      slidesToScroll: 1
     };
     return (
       <Slider className="SliderContainer"{...settings}>

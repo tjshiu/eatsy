@@ -13,7 +13,7 @@
 #
 
 class Product < ApplicationRecord
-  validates :user_id, :product_name, :overview, :description, :cost, presence: true
+  validates :user_id, :product_name, :overview, :description, :cost, :image_url, presence: true
   belongs_to :user
 
 end
