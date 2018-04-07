@@ -37,6 +37,31 @@
   padding-left: 30px;
 }
 
+.errors-container {
+  margin-top: 10px;
+  margin-bottom: 13px;
+}
+
+.or {
+  font-size: 10px;
+  color: grey;
+  padding: 10px;
+  padding-right: 13px;
+  background-color: white;
+  width: 10px;
+  position: absolute;
+  bottom: -5px;
+  top: 25px;
+}
+
+.demo-button-container {
+  margin-top: 20px;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $lightgrey;
+  position: relative;
+}
+
 .whole-form {
   border: 1px solid lightgrey;
   background: white;
@@ -44,7 +69,6 @@
   padding-bottom: 20px;
   border-radius: 5px;
 }
-
 
 .login-form-box {
   margin: 0px;
@@ -55,7 +79,8 @@
   align-content: center;
 }
 
-.session-submit {
+
+.session-submit, .demo-button{
   width: 60%;
   background: $orange;
   color: white;

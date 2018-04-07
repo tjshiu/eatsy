@@ -10,6 +10,7 @@ class RegisterForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
     this.update = this.update.bind(this);
   }
 
@@ -36,6 +37,11 @@ class RegisterForm extends React.Component {
     );
   }
 
+  handleDemo(e) {
+    e.preventDefault();
+    this.props.loginDemo().then((user) => this.props.closeModal());
+  }
+
   componentWillUnmount() {
     this.props.clearErrors();
   }
@@ -47,12 +53,14 @@ class RegisterForm extends React.Component {
           <button className="the-form-button">{this.props.formType}</button>
           {this.props.otherForm}
         </nav>
+        <div className='demo-button-container'>
+          <button className='demo-button' onClick={this.handleDemo}>Demo</button>
+          <div className="or">OR</div>
+        </div>
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
-            <br />
-            <div>{this.renderErrors()}</div>
+            <div className="errors-container">{this.renderErrors()}</div>
             <div className="login-form">
-              <br />
               <label>
                 Username:
                 <div>

@@ -58,7 +58,7 @@ class NavBar extends React.Component {
           <h3>Search</h3>
         </div>
         <div className="NavBarRight">
-          <Link className='sell-link' to="products/new" className='Register'>Sell on Eatsy</Link>
+          <Link className='sell-link' to="/products/new" className='Register'>Sell on Eatsy</Link>
           {this.Greeting()}
           <div className='cart'>
             <i className="fa fa-shopping-cart" aria-hidden="true"></i>
