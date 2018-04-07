@@ -46,6 +46,10 @@ class SignInForm extends React.Component {
           {this.props.otherForm}
           <button className="the-form-button">{this.props.formType}</button>
         </nav>
+        <div>
+          <button onClick={this.props.loginDemo}>Demo</button>
+        </div>
+
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
             <br />

@@ -48,15 +48,16 @@ header {
   width: 100px;
 }
 
-.Register {
+.Register, .sell-link {
   font-size: 15px;
   color: $orange;
   background-color: white;
   border: 0px;
+  text-decoration: none;
   margin: 10px;
 }
 
-.Register:hover {
+.Register:hover, .sell-link:hover {
   cursor: pointer;
   text-decoration: underline;
   margin: 10px;
@@ -83,7 +84,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
 }
 
 .fa {
