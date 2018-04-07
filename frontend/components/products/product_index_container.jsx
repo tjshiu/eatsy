@@ -1,14 +1,13 @@
 import { connect } from "react-redux";
 import ProductIndex from "./product_index";
-import { fetchPosts } from "../../actions/post_actions";
+import { fetchProducts } from "../../actions/product_actions";
 
 const mapStateToProps = state => ({
-  posts: Object.keys(state.posts).map(id => state.posts[id])
+  products: Object.keys(state.entities.products).map(id => state.entities.products[id])
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPosts: () => dispatch(fetchPosts()),
-  deletePost: id => dispatch(deletePost(id))
+  fetchProducts: () => dispatch(fetchProducts())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(PostIndex);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductIndex);
