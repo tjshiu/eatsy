@@ -9,6 +9,7 @@ class ProductShow extends React.Component {
     return(
       <div>
         hello
+        {this.props.product.productName}
       </div>
     );
   }
