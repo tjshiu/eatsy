@@ -14,6 +14,9 @@
 
 class Product < ApplicationRecord
   validates :user_id, :product_name, :overview, :description, :cost, :image_url, presence: true
-  belongs_to :user
 
+  belongs_to :seller,
+    foreign_key: :user_id,
+    primary_key: :id,
+    class_name: :User
 end

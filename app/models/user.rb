@@ -18,7 +18,10 @@ class User < ApplicationRecord
   validates :username, :email, :session_token, uniqueness: true
   after_initialize :ensure_session_token, :ensure_image_url
 
-  has_many :products
+  has_many :products,
+    foreign_key: :user_id,
+    primary_key: :id,
+    class_name: :Product
 
   attr_reader :password
 
