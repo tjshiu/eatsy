@@ -16,8 +16,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  margin-left: 10%;
-  margin-right: 13%;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 
 .header-name {
@@ -91,10 +91,11 @@ header {
 
 .fa {
   font-size: 20px;
-  margin-left: 10px;
+  color: grey;
 }
 
 .cart-label {
-  color: grey;
-  margin-left: 10px;
+  color: $darkgrey;
+  margin-top: 3px;
+  font-size: 14px;
 }

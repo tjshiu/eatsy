@@ -1,14 +1,14 @@
 @import "base/global.scss";
 
 .homepage.productImg {
-  width: 243px;
-  height: 300px;
+  width: 300px;
+  height: 400px;
   object-fit: cover;
 }
 
 .HomepageContainer {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 4%;
+  margin-right: 4%;
   display: flex;
 }
 
@@ -47,4 +47,62 @@
 .home.productCost {
   margin-top: 4px;
   font-size: 15px;
+}
+
+.fa.fa-check {
+  color: $orange;
+  margin-right: 3px;
+}
+
+.homepage-selling-container {
+  display: flex;
+  margin-left: 4%;
+  margin-right: 4%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.homepage-selling-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  width: 25%;
+}
+
+.homepage-selling-item div {
+  width: 100%;
+  text-align: center;
+  color: grey;
+  font-size: 18px;
+}
+.homepage-title {
+  text-align: center;
+  font-size: 20px;
+  color: grey;
+  margin-bottom: 4px;
+}
+
+.productsLinkContainer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.productsLink {
+  text-decoration: none;
+  font-size: 20px;
+  color: $orange;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border: 1px solid $orange;
+  border-radius: 5px;
+}
+
+.productsLink:hover {
+  background-color: $lightorange;
+  cursor: pointer;
 }

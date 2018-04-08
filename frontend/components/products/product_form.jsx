@@ -75,64 +75,76 @@ class ProductForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <Dropzone
-          multiple={false}
-          accept="image/*"
-          onDrop={this.onImageDrop.bind(this)}
-        >
-          <p>Drop an image or click to select a file to upload.</p>
-        </Dropzone>
-        <div className="FileUpload">...</div>
-        <div>
-          {this.state.image_url === "" ? null : (
+      <div className="whole-product-form">
+        <h1>{this.props.formType}</h1>
+        <div className="product-form-container">
+          <div className="product-image-upload">
+            <Dropzone
+              multiple={false}
+              accept="image/*"
+              onDrop={this.onImageDrop.bind(this)}>
+              <div className='drop-zone-instructions'>
+                <div>Add a Primary Photo</div>
+                <div>Drop an image or click to select a file to upload.</div>
+                <br/>
+                <i class="fa fa-camera" aria-hidden="true"></i>
+              </div>
+            </Dropzone>
             <div>
-              <p>{this.state.uploadedFile.name}</p>
-              <img src={this.state.image_url} />
+              {this.state.image_url === "" ? null : (
+                <div className='image-upload'>
+                  <div><img src={this.state.image_url} /></div>
+                  <div>{this.state.uploadedFile.name}</div>
+                </div>
+              )}
             </div>
-          )}
+          </div>
+          <form className='product-form'onSubmit={this.handleSubmit}>
+            <label>
+              Product Name:
+              <div>
+                <input
+                  type="text"
+                  value={this.state.product_name}
+                  onChange={this.update("product_name")}
+                />
+              </div>
+            </label>
+            <label>
+              Overview:
+              <div>
+                <input
+                  type="text"
+                  value={this.state.overview}
+                  onChange={this.update("overview")}
+                />
+              </div>
+            </label>
+            <label>
+              Description:
+              <div>
+                <textarea
+                  value={this.state.description}
+                  onChange={this.update("description")}
+                  />
+              </div>
+            </label>
+            <label>
+              Cost:
+              <div>
+                <input
+                  type="number"
+                  min="0.00"
+                  step="0.01"
+                  value={this.state.cost}
+                  onChange={this.update("cost")}
+                  />
+              </div>
+            </label>
+            <br />
+            <input type="submit" value={this.props.formType} />
+          </form>
         </div>
-        <h3>{this.props.formType}</h3>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Product Name:
-            <input
-              type="text"
-              value={this.state.product_name}
-              onChange={this.update("product_name")}
-            />
-          </label>
-          <br />
-          <label>
-            Overview:
-            <input
-              type="text"
-              value={this.state.overview}
-              onChange={this.update("overview")}
-            />
-          </label>
-          <br />
-          <label>
-            Description:
-            <textarea
-              value={this.state.description}
-              onChange={this.update("description")}
-            />
-          </label>
-          <br />
-          <label>
-            Cost:
-            <input
-              type="number"
-              min="0.00"
-              step="0.01"
-              value={this.state.cost}
-              onChange={this.update("cost")}
-            />
-          </label>
-          <br />
-          <input type="submit" value={this.props.formType} />
-        </form>
       </div>
     );
   }
