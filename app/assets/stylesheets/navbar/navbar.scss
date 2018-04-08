@@ -7,12 +7,17 @@ header {
   background-color: white;
 }
 
+.NavBar-Container {
+  border-bottom: 1px solid lightgrey;
+}
+
 .NavBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  border-bottom: 1px solid lightgrey;
+  margin-left: 10%;
+  margin-right: 13%;
 }
 
 .header-name {
@@ -23,19 +28,17 @@ header {
 .NavBarLeft {
   display: flex;
   align-items: center;
-  width: 500px;
+  width: 400px;
 }
 
 .NavBarRight {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 600px;
+  min-width: 400px;
 }
 
 .Logo {
-  padding-left: 30px;
-  margin-left: 200px;
   padding-right: 30px;
   font-size: 40px;
   color: $orange;
@@ -88,7 +91,6 @@ header {
 
 .fa {
   font-size: 20px;
-  margin-right: 230px;
   margin-left: 10px;
 }
 

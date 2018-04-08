@@ -1,25 +1,25 @@
 .slider.one {
 
-  background-image: image-url('a');
+  background-image: url('http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_1700/v1522981634/fruit_bowl.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .slider.two {
-  background-image: image-url('b');
+  background-image: url('http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_1700/v1522981627/bibibap.jpg');
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
 }
 .slider.three {
-  background-image: image-url('c');
+  background-image: url('http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_1700/v1522981649/grapefruit_break.jpg');
   background-size: cover;
   background-position: bottom left;
   background-repeat: no-repeat;
 }
 .slider.four {
-  background-image: image-url('d');
+  background-image: url('http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_1700/v1522981608/oatmeal_bowls.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -53,7 +53,7 @@
 
 .SliderContainer {
   display: block;
-  margin-left: 230px;
-  margin-right: 230px;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 20px;
 }

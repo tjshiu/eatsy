@@ -1,0 +1,29 @@
+.index.productimg{
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.index.product.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.index.product.list li{
+  margin-left: 10px;
+}
+.indexContainer {
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20px;
+  padding: 10px;
+  justify-content: space-between;
+
+}
+
+.index-side-search {
+  width: 300px;
+  height: 500px;
+  border: 1px solid lightgrey;
+}

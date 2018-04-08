@@ -50,22 +50,24 @@ class NavBar extends React.Component {
 
   render() {
     return (
-      <nav className="NavBar">
-        <div className="NavBarLeft">
-          <Link to="/" className="header-link">
-            <h1 className="Logo">Eatsy</h1>
-          </Link>
-          <h3>Search</h3>
-        </div>
-        <div className="NavBarRight">
-          <Link className='sell-link' to="/products/new" className='Register'>Sell on Eatsy</Link>
-          {this.Greeting()}
-          <div className='cart'>
-            <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-            <div className='cart-label'>Cart</div>
+      <div className='NavBar-Container'>
+        <nav className="NavBar">
+          <div className="NavBarLeft">
+            <Link to="/" className="header-link">
+              <h1 className="Logo">Eatsy</h1>
+            </Link>
+            <h3>Search</h3>
           </div>
-        </div>
-      </nav>
+          <div className="NavBarRight">
+            <Link className='sell-link' to="/products/new" className='Register'>Sell on Eatsy</Link>
+            {this.Greeting()}
+            <div className='cart'>
+              <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+              <div className='cart-label'>Cart</div>
+            </div>
+          </div>
+        </nav>
+      </div>
     );
   }
 }
