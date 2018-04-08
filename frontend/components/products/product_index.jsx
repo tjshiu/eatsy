@@ -19,8 +19,8 @@ class ProductIndex extends React.Component {
 
     return (
       <div className="indexContainer">
-        <div className='index-side-search'>search boxessearch boxessearch boxessearch boxessearch boxessearch boxessearch boxessearch boxessearch boxessearch boxessearch boxessearch boxessearch boxessearch boxes</div>
-        <ul className='index product list'>
+        <div className='index-side-search'>Search Box</div>
+        <ul className='index-product-list'>
           {products}
         </ul>
       </div>

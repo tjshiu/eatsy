@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const ProductIndexItem = ({ product }) => {
+const HomepageIndexItem = ({ product }) => {
 
   return (
-    <li className="product items">
+    <li className="homepage items">
       <ul>
-        <li><img className='index productImg' src={product.imageUrl}/></li>
+        <li><img className='homepage productImg' src={product.imageUrl}/></li>
         <li className='index productName'><Link to={`/products/${product.id}`} className="index productName">{product.productName}</Link></li>
         <li className="index productSeller">{product.seller.username}</li>
         <li className="index productRating">Rating</li>
@@ -16,4 +16,4 @@ const ProductIndexItem = ({ product }) => {
     </li>);
 };
 
-export default ProductIndexItem;
+export default HomepageIndexItem;

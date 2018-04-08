@@ -1,5 +1,6 @@
+
 import { connect } from "react-redux";
-import ProductIndex from "./product_index";
+import HomepageIndex from "./homepage_index";
 import { fetchProducts } from "../../actions/product_actions";
 
 const mapStateToProps = state => ({
@@ -10,4 +11,4 @@ const mapDispatchToProps = dispatch => ({
   fetchProducts: () => dispatch(fetchProducts())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductIndex);
+export default connect(mapStateToProps, mapDispatchToProps)(HomepageIndex);

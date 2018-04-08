@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductIndexItem from './product_index_item';
+import HomePageIndexItem from './homepage_index_item';
 
 class ProductIndex extends React.Component {
 
@@ -10,7 +10,7 @@ class ProductIndex extends React.Component {
   render() {
     const products = this.props.products.map(product => {
       return (
-        <ProductIndexItem
+        <HomePageIndexItem
           key={`product-${product.id}`}
           product={product}
         />
@@ -18,8 +18,8 @@ class ProductIndex extends React.Component {
     });
 
     return (
-      <div>
-        <ul>
+      <div className="homepageContainer">
+        <ul className='homepage-product-list'>
           {products}
         </ul>
       </div>
