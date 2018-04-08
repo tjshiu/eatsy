@@ -8,10 +8,10 @@ const HomepageIndexItem = ({ product }) => {
     <li className="homepage items">
       <ul>
         <li><img className='homepage productImg' src={product.imageUrl}/></li>
-        <li className='index productName'><Link to={`/products/${product.id}`} className="index productName">{product.productName}</Link></li>
-        <li className="index productSeller">{product.seller.username}</li>
-        <li className="index productRating">Rating</li>
-        <li className='index productCost'>${(product.cost).toFixed(2)}</li>
+        <li className='home productName'><Link to={`/products/${product.id}`} className="home productName">{product.productName}</Link></li>
+        <li className="home productSeller">{product.seller.username}</li>
+        <li className="home productRating">Rating</li>
+        <li className='home productCost'>${(product.cost).toFixed(2)}</li>
       </ul>
     </li>);
 };

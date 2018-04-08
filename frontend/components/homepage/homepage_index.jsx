@@ -18,8 +18,8 @@ class ProductIndex extends React.Component {
     });
 
     return (
-      <div className="homepageContainer">
-        <ul className='homepage-product-list'>
+      <div className="HomepageContainer">
+        <ul className='home-product-list'>
           {products}
         </ul>
       </div>
