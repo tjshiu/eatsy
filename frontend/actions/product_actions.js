@@ -1,7 +1,7 @@
 import * as ProductAPIUtil from "../util/product_api_util";
 
 export const RECEIVE_ALL_PRODUCTS = "RECEIVE_ALL_PRODUCTS";
-export const RECEIVE_PRODUCT = "RECEIVE_PRODUCT";
+export const RECEIVE_PRODUCT_PAYLOAD = "RECEIVE_PRODUCT_PAYLOAD";
 export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
 export const RECEIVE_PRODUCT_ERRORS = "RECEIVE_PRODUCT_ERRORS";
 
@@ -10,9 +10,9 @@ export const receiveAllProducts = products => ({
   products
 });
 
-export const receiveProduct = product => ({
-  type: RECEIVE_PRODUCT,
-  product
+export const receiveProduct = payload => ({
+  type: RECEIVE_PRODUCT_PAYLOAD,
+  payload
 });
 
 export const removeProduct = productId => ({
@@ -31,23 +31,24 @@ export const fetchProducts = () => dispatch =>
   );
 
 export const fetchProduct = id => dispatch =>
-  ProductAPIUtil.fetchProduct(id).then(product =>
-    dispatch(receiveProduct(product))
+  ProductAPIUtil.fetchProduct(id).then(payload =>
+    dispatch(receiveProduct(payload))
   );
+
 
 export const createProduct = product => dispatch =>
   ProductAPIUtil.createProduct(product).then(
-    product => dispatch(receiveProduct(product)),
+    payload => dispatch(receiveProduct(payload)),
     err => dispatch(receiveErrors(err.responseJSON))
   );
 
 export const updateProduct = product => dispatch =>
   ProductAPIUtil.updateProduct(product).then(
-    product => dispatch(receiveProduct(product)),
+    payload => dispatch(receiveProduct(payload)),
     err => dispatch(receiveErrors(err.responseJSON))
   );
 
 export const deleteProduct = id => dispatch =>
-  ProductAPIUtil.deleteProduct(id).then(product =>
-    dispatch(removeProduct(product.id))
+  ProductAPIUtil.deleteProduct(id).then(payload =>
+    dispatch(removeProduct(payload.product.id))
   );

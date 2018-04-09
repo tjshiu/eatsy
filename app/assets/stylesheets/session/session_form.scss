@@ -43,7 +43,7 @@
 }
 
 .or {
-  font-size: 10px;
+  font-size: 13px;
   color: grey;
   padding: 10px;
   padding-right: 13px;
@@ -84,13 +84,17 @@
   width: 60%;
   background: $orange;
   color: white;
-  font-size: 14px;
+  font-size: 18px;
   padding-top: 3px;
   padding-bottom: 3px;
 }
 
+.demo-button {
+  background: $orange;
+}
+
 .login-form-container label {
-  font-size: 15px;
+  font-size: 18px;
   color: grey;
 }
 
@@ -101,6 +105,8 @@
 
 .login-input {
   margin-bottom: 10px;
+  padding-left: 5px;
+  font-size: 18px;
   margin-top: 5px;
   width: 60%;
 }

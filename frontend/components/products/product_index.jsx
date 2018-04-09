@@ -8,6 +8,7 @@ class ProductIndex extends React.Component {
   }
 
   render() {
+    if (this.props.loading) return null;
     const products = this.props.products.map(product => {
       return (
         <ProductIndexItem

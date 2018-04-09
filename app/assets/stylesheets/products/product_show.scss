@@ -1,0 +1,80 @@
+@import 'base/global.scss';
+
+.whole-product-show {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.product-show-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-show.seller {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.product-show-nav img{
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+}
+
+.product-show.seller h1 {
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.product-show-productDetail {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.product-show {
+  padding: 10px;
+}
+
+.product-show.left-side {
+  width: 50%;
+}
+.product-show.left-side div {
+  font-size: 16px;
+  width: 100%;
+}
+
+.product-show.description h2, .product-show.overview h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+
+.product-show.left-side img{
+  padding: 5px;
+  width: 100%;
+  max-height: 800px;
+  object-fit: contain;
+}
+.product-show.right-side {
+  width: 50%;
+  padding: 10px;
+}
+
+.product-show.right-side h1 {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+}
+.product-show.description, .product-show.overview {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: $darkgrey;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
