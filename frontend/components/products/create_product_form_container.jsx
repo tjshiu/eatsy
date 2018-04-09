@@ -4,7 +4,7 @@ import { createProduct } from "../../actions/product_actions";
 
 const mapStateToProps = (state, ownProps) => ({
   userId: state.session.currentUser.id,
-  formType: "Create Product"
+  formType: "Create A Product"
 });
 
 const mapDispatchToProps = dispatch => ({

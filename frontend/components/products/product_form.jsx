@@ -66,11 +66,7 @@ class ProductForm extends React.Component {
       if (key === "uploadedFile") continue;
       productDetail[key] = this.state[key];
     }
-    this.props
-      .action(productDetail)
-      .then(railsItem =>
-        this.props.history.push(`products/${railsItem.entities.product.id}`)
-      );
+    this.props.action(productDetail).then(entities => this.props.history.push(`/products/${entities.product.id}`));
   }
 
   render() {
@@ -87,7 +83,7 @@ class ProductForm extends React.Component {
                 <div>Add a Primary Photo</div>
                 <div>Drop an image or click to select a file to upload.</div>
                 <br/>
-                <i class="fa fa-camera" aria-hidden="true"></i>
+                <i className="fa fa-camera" aria-hidden="true"></i>
               </div>
             </Dropzone>
             <div>
@@ -101,7 +97,7 @@ class ProductForm extends React.Component {
           </div>
           <form className='product-form'onSubmit={this.handleSubmit}>
             <label>
-              Product Name:
+              Product Name: <div className='required'> *</div>
               <div>
                 <input
                   type="text"
@@ -111,17 +107,16 @@ class ProductForm extends React.Component {
               </div>
             </label>
             <label>
-              Overview:
+              Overview: <div className='required'> *</div>
               <div>
-                <input
-                  type="text"
+                <textarea
                   value={this.state.overview}
                   onChange={this.update("overview")}
                 />
               </div>
             </label>
             <label>
-              Description:
+              Description: <div className='required'> *</div>
               <div>
                 <textarea
                   value={this.state.description}
@@ -130,19 +125,18 @@ class ProductForm extends React.Component {
               </div>
             </label>
             <label>
-              Cost:
-              <div>
+              Cost: $
                 <input
+                  id='cost'
                   type="number"
                   min="0.00"
                   step="0.01"
                   value={this.state.cost}
                   onChange={this.update("cost")}
-                  />
-              </div>
+                  /> <div className='required'> *</div>
             </label>
             <br />
-            <input type="submit" value={this.props.formType} />
+            <input id="form-submit" type="submit" value={this.props.formType} />
           </form>
         </div>
       </div>
