@@ -1,6 +1,7 @@
 class Api::ProductsController < ApplicationController
   def index
-    @products = Product.all
+    allProducts = Product.all.shuffle
+    @products = allProducts
     render 'api/products/index'
   end
 

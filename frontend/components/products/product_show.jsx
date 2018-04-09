@@ -14,6 +14,9 @@ class ProductShow extends React.Component {
 
   render() {
     if (this.props.product && this.props.seller) {
+      let otherProductsIds = Object.keys(this.props.products).filter((id) => +id !== +this.props.product.id);
+      let otherProducts = otherProductsIds.map((id) => this.props.products[parseInt(id)]);
+      console.log(otherProducts);
 
       return (
         <div className="whole-product-show">
@@ -22,9 +25,11 @@ class ProductShow extends React.Component {
               <img src={this.props.seller.imageUrl} />
               <h1>{this.props.seller.username}</h1>
             </div>
-            <div>
-
-              <Link className="productsLink" to='/products'>See All Food ></Link>
+            <div className='product-show-nav-right-side'>
+              <ul className='products-seller-items-container'>
+                {otherProducts.map(product => <ProductShowSellerItems product={product}/> )}
+              </ul>
+              <Link className="products-show-nav-Link" to='/products'>See All Food ></Link>
             </div>
           </nav>
 

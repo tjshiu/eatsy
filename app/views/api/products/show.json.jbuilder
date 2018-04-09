@@ -18,7 +18,7 @@ json.products do
       json.overview product.overview
       json.description product.description
       json.cost product.cost
-      json.image_url asset_path(@product.image_url)
+      json.image_url asset_path(product.image_url)
     end
   end
 end

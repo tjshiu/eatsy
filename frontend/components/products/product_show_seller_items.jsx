@@ -8,10 +8,9 @@ class ProductShowSellerItems extends React.Component {
 
   render() {
     return (
-      <ul>
-        <li>
-        </li>
-      </ul>
+      <li>
+        <Link to={`/products/${this.props.product.id}`}><img src={this.props.product.imageUrl} /></Link>
+      </li>
     );
   }
 }
