@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Route, Redirect, withRouter } from "react-router-dom";
 import { openModal } from "../actions/modal_actions";
+import MustBeSignedIn from "../components/errors/must_be_signed_in";
 
 const Auth = ({ component: Component, path, loggedIn, exact }) => (
   <Route
@@ -22,7 +23,7 @@ const Protected = ({ component: Component, path, loggedIn, exact, redirectToModa
         return <Component {...props} />;
       } else {
         redirectToModal();
-        return null;
+        return <MustBeSignedIn />;
       }
     }}
   />

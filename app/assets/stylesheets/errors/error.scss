@@ -1,0 +1,19 @@
+@import "base/global.scss";
+.whole-errors {
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
+.error-container {
+  display: flex;
+  margin-left: 4%;
+  margin-right: 4%;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-message {
+  font-size: 30px;
+  padding: 20px;
+}
