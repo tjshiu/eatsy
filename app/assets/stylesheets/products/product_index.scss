@@ -3,7 +3,6 @@
 .indexContainer {
   display: flex;
   margin-left: 4%;
-  margin-right: 4%;
   margin-top: 20px;
   padding: 10px;
   justify-content: center;
@@ -27,7 +26,7 @@
   margin-left: 10px;
   margin-bottom: 10px;
   width: 22%;
-  min-width: 200px;
+  min-width: 250px;
 }
 
 .index.productImg{
@@ -44,7 +43,7 @@
 }
 
 .index {
-  width: 300px;
+  min-width: 250px;
 }
 
 .index.productName:hover {

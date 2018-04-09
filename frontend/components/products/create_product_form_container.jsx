@@ -1,14 +1,16 @@
 import { connect } from "react-redux";
 import ProductForm from "./product_form";
-import { createProduct } from "../../actions/product_actions";
+import { createProduct, receiveErrors } from "../../actions/product_actions";
 
 const mapStateToProps = (state, ownProps) => ({
+  errors: state.errors.products,
   userId: state.session.currentUser.id,
   formType: "Create A Product"
 });
 
 const mapDispatchToProps = dispatch => ({
-  action: product => dispatch(createProduct(product))
+  action: product => dispatch(createProduct(product)),
+  clearErrors: () => dispatch(receiveErrors([]))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductForm);

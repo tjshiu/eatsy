@@ -53,6 +53,20 @@ class ProductForm extends React.Component {
     });
   }
 
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>{error}</li>
+        ))}
+      </ul>
+    );
+  }
+
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   update(field) {
     return e => {
       this.setState({ [field]: e.target.value });
@@ -96,6 +110,7 @@ class ProductForm extends React.Component {
             </div>
           </div>
           <form className='product-form'onSubmit={this.handleSubmit}>
+            <div className="product-errors-container">{this.renderErrors()}</div>
             <label>
               Product Name: <div className='required'> *</div>
               <div>
@@ -110,6 +125,7 @@ class ProductForm extends React.Component {
               Overview: <div className='required'> *</div>
               <div>
                 <textarea
+                  className='overview'
                   value={this.state.overview}
                   onChange={this.update("overview")}
                 />
@@ -119,6 +135,7 @@ class ProductForm extends React.Component {
               Description: <div className='required'> *</div>
               <div>
                 <textarea
+                  className='Description'
                   value={this.state.description}
                   onChange={this.update("description")}
                   />

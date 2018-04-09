@@ -13,6 +13,11 @@
 
 }
 
+.product-errors-container {
+  display: inline;
+  margin-bottom: 10px;
+}
+
 .required {
   color: $orange;
   display: inline;
@@ -26,14 +31,28 @@
   height: 30px;
   font-size: 15px;
   border: 1px solid lightgrey;
+  padding-left: 10px;
+  padding-top: 3px;
 }
 
 .product-form-container input:focus, textarea:focus{
   outline: none;
-  border:1px solid black;
+  border:1px solid $darkgrey;
+  padding-left: 10px;
+  padding-top: 3px;
 }
 
-.product-form-container textarea {
+.product-form-container textarea{
+  font-size: 15px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.overview {
+  height: 100px;
+}
+
+.Description {
   height: 200px;
 }
 #cost {
