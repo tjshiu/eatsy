@@ -1,6 +1,10 @@
 class Api::ShoppingCartItemsController < ApplicationController
   def index
-    @shopping_cart_items = ShoppingCartItem.where(user_id: params[:user_id])
+    if params[:user_id]
+      @shopping_cart_items = ShoppingCartItem.where(user_id: params[:user_id])
+    else
+      @shopping_cart_items = ShoppingCartItem.all
+    end
     render 'api/shopping_cart_items/index'
   end
 

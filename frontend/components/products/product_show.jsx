@@ -11,6 +11,11 @@ class ProductShow extends React.Component {
     this.props.fetchProduct(this.props.match.params.productId);
   }
 
+  componentWillUnmount() {
+    debugger;
+    console.log(this.props);
+  }
+
 
   render() {
     if (this.props.product && this.props.seller) {

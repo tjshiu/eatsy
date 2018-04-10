@@ -2,13 +2,28 @@ import React from 'react';
 import ProductIndexItem from './product_index_item';
 
 class ProductIndex extends React.Component {
+  componentWillMount() {
+    debugger;
+    this.firstLoad = true;
+    //Partial fix for a new slice of state which is the loading. 
+  }
 
   componentDidMount() {
+    debugger;
     this.props.fetchProducts();
   }
 
+  componentWillReceiveProps(nextProps) {
+    debugger;
+    console.log(nextProps);
+  }
+
   render() {
-    if (this.props.loading) return null;
+    debugger;
+    if (this.firstLoad) {
+      this.firstLoad = false;
+      return null;
+    }
     const products = this.props.products.map(product => {
       return (
         <ProductIndexItem

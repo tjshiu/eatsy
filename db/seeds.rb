@@ -12,16 +12,16 @@ b = User.create(username: 'Mediterranean foodie', password: 'password', email: "
 c = User.create(username: "Andie", password: 'password', email: "andie@u.com")
 d = User.create(username: 'BossCake', password: 'password', email: "bosscake@bosscake.com")
 
-Product.create(product_name: "Mama's Favorite Chocolate Cake Crumbles",
+Product.create(product_name: "Mama's Favorite Chocolate Cake",
   overview: "Two-tiered Chocolate Cake with our Award-winning white buttercream frosting",
-  description: "Enjoy our homemade mama's favorite chocolate cake crumble, which started three generations ago. The recipe is a secret family recipe and is served with our award-winning white buttercream frosting. We send the cake within 1 business day and will arrive depending on how far you live.",
+  description: "Enjoy our homemade mama's favorite chocolate cake, which started three generations ago. The recipe is a secret family recipe and is served with our award-winning white buttercream frosting. We send the cake within 1 business day and will arrive depending on how far you live.",
   cost: 20.00,
   image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_1000/v1522981626/triple_chocolate_cake.jpg",
   user_id: d.id
 )
-Product.create(product_name: 'Rasberry Mint Cake',
-  overview: "Rasberry Mint Cake with White Buttercream Frosting",
-  description: "Enjoy our homemade treats that is covered in our award-winning white buttercream frosting. The rasberries are grown from local farmers. We send the cake within 1 business day and will arrive depending on how far you live.",
+Product.create(product_name: 'Raspberry Mint Cake',
+  overview: "Raspberry Mint Cake with White Buttercream Frosting",
+  description: "Enjoy our homemade treats that is covered in our award-winning white buttercream frosting. The raspberries are grown from local farmers. We send the cake within 1 business day and will arrive depending on how far you live.",
   cost: 20.00,
   image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_1000/v1522981616/mint_rasberry_cake.jpg",
   user_id: d.id
