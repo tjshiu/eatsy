@@ -22,6 +22,7 @@
 
 .whole-user-detail {
   display: flex;
+  justify-content: flex-start;
 }
 
 .user-detail {
@@ -31,13 +32,13 @@
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
-  width: 250px;
+  width: 200px;
   height: 300px;
   border-radius: 10px;
 
   img {
-    height: 200px;
-    width: 200px;
+    height: 175px;
+    width: 175px;
     border-radius: 10px;
     background-color: white;
     margin: 20px;
@@ -47,6 +48,8 @@
 
   div {
     font-size: 30px;
+    width: 100%;
+    text-align: center;
   }
 }
 
