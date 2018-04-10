@@ -13,7 +13,8 @@ const UserReducer = (oldState = {}, action) => {
       return merge({}, oldState, {[action.user.id]: action.user});
     case RECEIVE_PRODUCT_PAYLOAD:
       // return merge({}, oldState, { [action.product.id]: action.product });
-      return merge({}, action.payload.seller);
+      let newState = merge({}, oldState, action.payload.seller);
+      return newState;
     default:
       return oldState;
   }

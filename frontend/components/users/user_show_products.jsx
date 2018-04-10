@@ -13,11 +13,15 @@ class UserShowProducts extends React.Component {
         <ul>
           <li><Link to={`/products/${this.props.product.id}`}><img className='index productImg' src={this.props.product.imageUrl}/></Link></li>
           <li className='index productName'><Link to={`/products/${this.props.product.id}`} className="index productName">{this.props.product.productName}</Link></li>
-          <li className="index productSeller">{this.props.product.seller.username}</li>
           <li className="index productRating">Rating</li>
           <li className='index productCost'>${(this.props.product.cost).toFixed(2)}</li>
-          <li><button onClick={() => this.props.deleteProduct(this.props.product.id)}>Delete Product</button></li>
-          <li><Link to={`/products/${this.props.product.id}/edit`}>Edit Product</Link></li>
+
+          {this.props.currentUserId !== this.props.userId ? null : (
+            <React.Fragment>
+              <li><button onClick={() => this.props.deleteProduct(this.props.product.id)}>Delete Product</button></li>
+              <li><Link to={`/products/${this.props.product.id}/edit`}>Edit Product</Link></li>
+            </React.Fragment>
+          )}
         </ul>
       </li>
     );

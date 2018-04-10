@@ -19,6 +19,7 @@ class UserShow extends React.Component {
 
 
   render() {
+    debugger;
     if (!this.props.user || !this.props.products) return null;
     return(
       <div>
@@ -36,6 +37,8 @@ class UserShow extends React.Component {
                 key={`user-show-detail-products-${id}`}
                 product={this.props.products[id]}
                 deleteProduct={this.props.deleteProduct}
+                currentUserId={this.props.currentUser.id}
+                userId={this.props.user.id}
                 />))}
           </ul>
         </div>

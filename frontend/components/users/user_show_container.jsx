@@ -6,7 +6,8 @@ import { fetchUser } from '../../actions/user_actions';
 const mapStateToProps = (state, ownProps) => {
   return {
     user: state.entities.users[ownProps.match.params.userId],
-    products: state.entities.products
+    products: state.entities.products,
+    currentUser: state.session.currentUser || {}
   };
 };
 

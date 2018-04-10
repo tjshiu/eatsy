@@ -6,6 +6,7 @@ end
 json.seller do
   json.set! @product.seller.id do
     json.extract! @product.seller, :id, :username, :image_url
+    json.productIds @product.seller.product_ids
   end
 end
 
