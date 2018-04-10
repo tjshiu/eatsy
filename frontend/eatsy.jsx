@@ -8,6 +8,7 @@ import {
   updateProduct,
   deleteProduct
 } from "./actions/product_actions";
+import { fetchUser } from './actions/user_actions';
 import Root from "./components/root";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.createProduct = createProduct;
   window.updateProduct = updateProduct;
   window.deleteProduct = deleteProduct;
+  window.fetchUser = fetchUser;
 
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root);
