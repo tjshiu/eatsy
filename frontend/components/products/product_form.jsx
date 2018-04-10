@@ -27,7 +27,8 @@ class ProductForm extends React.Component {
         overview: this.props.product.overview,
         description: this.props.product.description,
         image_url: this.props.product.imageUrl,
-        cost: this.props.product.cost
+        cost: this.props.product.cost,
+        id: this.props.product.id
       }));
     }
   }

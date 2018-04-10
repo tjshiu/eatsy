@@ -23,6 +23,8 @@ class User < ApplicationRecord
     primary_key: :id,
     class_name: :Product
 
+  has_many :shopping_cart_items
+
   attr_reader :password
 
   def self.find_by_credentials(username, password)

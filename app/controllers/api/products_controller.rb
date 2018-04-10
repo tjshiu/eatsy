@@ -33,7 +33,7 @@ class Api::ProductsController < ApplicationController
   end
 
   def update
-    @product = Product.find_by(id: params[:id])
+    @product = Product.find(params[:id])
 
     if @product.update(product_params)
       render 'api/products/show'
@@ -43,6 +43,6 @@ class Api::ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:product_name, :user_id, :overview, :description, :cost, :image_url)
+    params.require(:product).permit(:product_name, :user_id, :overview, :description, :cost, :id, :image_url)
   end
 end
