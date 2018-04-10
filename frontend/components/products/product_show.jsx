@@ -21,10 +21,10 @@ class ProductShow extends React.Component {
       return (
         <div className="whole-product-show">
           <nav className='product-show-nav'>
-            <div className="product-show seller">
+            <Link className="product-show seller" to={`/users/${this.props.product.userId}`}>
               <img src={this.props.seller.imageUrl} />
               <h1>{this.props.seller.username}</h1>
-            </div>
+            </Link>
             <div className='product-show-nav-right-side'>
               <ul className='products-seller-items-container'>
                 {otherProducts.map(product => <ProductShowSellerItems product={product}/> )}
