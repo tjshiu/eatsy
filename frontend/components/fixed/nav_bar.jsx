@@ -34,7 +34,7 @@ class NavBar extends React.Component {
   personalGreeting() {
     return (
       <React.Fragment>
-        <h2 className="header-name">Hi, {this.props.currentUser.username}!</h2>
+        <Link to={`/users/${this.props.currentUser.id}`} className="header-name">Hi, {this.props.currentUser.username}!</Link>
         <button className="logout" onClick={this.props.logout}>
           Log Out
         </button>

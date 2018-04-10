@@ -1,0 +1,135 @@
+@import 'base/global.scss';
+
+.users-show-whole-page {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.user-show-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20px;
+  margin-right: 100px;
+
+  div {
+    font-size: 30px;
+    margin-left: 20px;
+  }
+}
+
+.whole-user-detail {
+  display: flex;
+}
+
+.user-detail {
+  background-color: $lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  width: 250px;
+  height: 300px;
+  border-radius: 10px;
+
+  img {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 20px;
+    background-position: top;
+
+  }
+
+  div {
+    font-size: 30px;
+  }
+}
+
+.user-detail-products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-product-items {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 30%;
+  min-width: 300px;
+  padding: 5px;
+  border: 1px solid lightgrey;
+  box-shadow: 5px;
+}
+
+.user-index.productImg{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.user-index.productName {
+  text-decoration: none;
+  color: $darkgrey;
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+.user-index {
+  min-width: 300px;
+}
+
+.index.productName:hover {
+  text-decoration: underline;
+}
+
+.user-index.productRating{
+  font-size: 15px;
+  color: grey;
+  margin-top: 4px;
+}
+
+.user-index.productCost {
+  margin-top: 4px;
+  font-size: 15px;
+}
+
+.user-index-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  .product-update {
+    text-decoration: none;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: $lightgrey;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    color: black;
+  }
+
+  .product-delete {
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 50%;
+    font-size: 20px;
+    border: 1px solid lightgrey;
+    background-color: $lightgrey;
+    position: relative;
+    bottom: 479px;
+    left: 12px;
+  }
+
+  .product-delete:hover, .product-update:hover{
+    background-color: grey;
+    border-color: grey;
+  }
+}
