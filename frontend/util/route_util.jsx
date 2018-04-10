@@ -60,10 +60,9 @@ const mapStateToPropsOwner = (state, ownProps) => {
   // } else {
   //   owner = state.session.currentUser.productIds.includes(+ ownProps.match.params.productId);
   // }
-
   return {
   loggedIn: Boolean(state.session.currentUser),
-  isOwner: isOwner(state, +ownProps.match.params.productId)
+  isOwner: isOwner(state, +ownProps.computedMatch.params.productId)
 };};
 
 const mapDispatchToProps = dispatch => ({

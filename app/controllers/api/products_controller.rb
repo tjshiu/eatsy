@@ -1,7 +1,10 @@
 class Api::ProductsController < ApplicationController
   def index
-    allProducts = Product.all.shuffle
-    @products = allProducts
+    if params[:user_id]
+      @products = Product.where(user_id: params[:user_id])
+    else
+      @products = Product.all
+    end
     render 'api/products/index'
   end
 

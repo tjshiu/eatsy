@@ -25,8 +25,8 @@ export const receiveErrors = errors => ({
   errors
 });
 
-export const fetchProducts = () => dispatch =>
-  ProductAPIUtil.fetchProducts().then(products =>
+export const fetchProducts = (optionalUserId) => dispatch =>
+  ProductAPIUtil.fetchProducts(optionalUserId).then(products =>
     dispatch(receiveAllProducts(products))
   );
 
