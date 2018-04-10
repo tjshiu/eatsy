@@ -88,13 +88,12 @@ class ProductForm extends React.Component {
     }
     this.props
       .action(productDetail)
-      .then(entities =>
-        this.props.history.push(`/products/${entities.product.id}`)
+      .then(payload =>
+        this.props.history.push(`/products/${payload.payload.product.id}`)
       );
   }
 
   render() {
-    console.log(this.state);
 
     return (
       <div className="whole-product-form">

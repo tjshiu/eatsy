@@ -8,6 +8,7 @@ import CreateProductContainer from "./products/create_product_form_container";
 import ProductShowContainer from "./products/product_show_container";
 import EditProductFormContainer from './products/update_product_form_container';
 import ProductIndexContainer from './products/product_index_container';
+import UserShowContainer from './users/user_show_container';
 
 const App = () => (
   <div>
@@ -19,6 +20,7 @@ const App = () => (
       <ProtectedRoute exact path="/products/new" component={CreateProductContainer} />
       <OwnerRoute path='/products/:productId/edit' component={EditProductFormContainer} />
       <Route path="/products/:productId" component={ProductShowContainer} />
+      <Route path='/users/:userId' component={UserShowContainer} />
       <Route path="/products" component={ProductIndexContainer} />
       <Route path="/" component={Homepage} />
       <Route component={Homepage} />
