@@ -2,12 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import configureStore from "./store/store";
 import {
-  fetchProducts,
-  fetchProduct,
-  createProduct,
-  updateProduct,
-  deleteProduct
-} from "./actions/product_actions";
+  fetchShoppingCartItems,
+  fetchShoppingCartItem,
+  createShoppingCartItem,
+  updateShoppingCartItem,
+  deleteShoppingCartItem
+} from "./actions/shopping_cart_actions";
+import { deleteProduct } from './actions/product_actions';
 import { fetchUser } from './actions/user_actions';
 import Root from "./components/root";
 
@@ -22,10 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.fetchProduct = fetchProduct;
-  window.fetchProducts = fetchProducts;
-  window.createProduct = createProduct;
-  window.updateProduct = updateProduct;
+  window.fetchShoppingCartItems = fetchShoppingCartItems;
+  window.fetchShoppingCartItem = fetchShoppingCartItem;
+  window.createShoppingCartItem = createShoppingCartItem;
+  window.updateShoppingCartItem = updateShoppingCartItem;
+  window.deleteShoppingCartItem = deleteShoppingCartItem;
   window.deleteProduct = deleteProduct;
   window.fetchUser = fetchUser;
 

@@ -1,4 +1,4 @@
-import * as ShoppingCartItemAPIUtil from "../util/product_api_util";
+import * as ShoppingCartItemAPIUtil from "../util/shopping_cart_item_api_util";
 
 export const RECEIVE_ALL_SHOPPING_CART_ITEMS_PAYLOAD = "RECEIVE_ALL_SHOPPING_CART_ITEMS_PAYLOAD";
 export const RECEIVE_SHOPPING_CART_ITEM_PAYLOAD = "RECEIVE_SHOPPING_CART_ITEM_PAYLOAD";
@@ -15,9 +15,9 @@ export const receiveShoppingCartItem = payload => ({
   payload
 });
 
-export const removeShoppingCartItem = productId => ({
+export const removeShoppingCartItem = shoppingCartItemId => ({
   type: REMOVE_SHOPPING_CART_ITEM,
-  productId
+  shoppingCartItemId
 });
 
 export const receiveShoppingCartItemErrors = errors => ({
@@ -50,5 +50,5 @@ export const updateShoppingCartItem = product => dispatch =>
 
 export const deleteShoppingCartItem = id => dispatch =>
   ShoppingCartItemAPIUtil.deleteShoppingCartItem(id).then(payload =>
-    dispatch(removeShoppingCartItem(payload.product.id))
+    dispatch(removeShoppingCartItem(id))
   );
