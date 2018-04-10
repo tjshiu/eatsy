@@ -1,54 +1,54 @@
-import * as ProductAPIUtil from "../util/product_api_util";
+import * as ShoppingCartItemAPIUtil from "../util/product_api_util";
 
-export const RECEIVE_ALL_SHOPPING_CART_ITEMS = "RECEIVE_ALL_SHOPPING_CART_ITEMS";
-export const RECEIVE_SHOPPING_CART_PAYLOAD = "RECEIVE_PRODUCT_PAYLOAD";
-export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
-export const RECEIVE_PRODUCT_ERRORS = "RECEIVE_PRODUCT_ERRORS";
+export const RECEIVE_ALL_SHOPPING_CART_ITEMS_PAYLOAD = "RECEIVE_ALL_SHOPPING_CART_ITEMS_PAYLOAD";
+export const RECEIVE_SHOPPING_CART_ITEM_PAYLOAD = "RECEIVE_SHOPPING_CART_ITEM_PAYLOAD";
+export const REMOVE_SHOPPING_CART_ITEM = "REMOVE_SHOPPING_CART_ITEM";
+export const RECEIVE_SHOPPING_CART_ERRORS = "RECEIVE_SHOPPING_CART_ERRORS";
 
-export const receiveAllProducts = products => ({
-  type: RECEIVE_ALL_PRODUCTS,
-  products
-});
-
-export const receiveProduct = payload => ({
-  type: RECEIVE_PRODUCT_PAYLOAD,
+export const receiveAllShoppingCartItems = payload => ({
+  type: RECEIVE_ALL_SHOPPING_CART_ITEMS_PAYLOAD,
   payload
 });
 
-export const removeProduct = productId => ({
-  type: REMOVE_PRODUCT,
+export const receiveShoppingCartItem = payload => ({
+  type: RECEIVE_SHOPPING_CART_ITEM_PAYLOAD,
+  payload
+});
+
+export const removeShoppingCartItem = productId => ({
+  type: REMOVE_SHOPPING_CART_ITEM,
   productId
 });
 
-export const receiveErrors = errors => ({
-  type: RECEIVE_PRODUCT_ERRORS,
+export const receiveShoppingCartItemErrors = errors => ({
+  type: RECEIVE_SHOPPING_CART_ERRORS,
   errors
 });
 
-export const fetchProducts = (optionalUserId) => dispatch =>
-  ProductAPIUtil.fetchProducts(optionalUserId).then(products =>
-    dispatch(receiveAllProducts(products))
+export const fetchShoppingCartItems = (optionalUserId) => dispatch =>
+  ShoppingCartItemAPIUtil.fetchShoppingCartItems(optionalUserId).then(products =>
+    dispatch(receiveAllShoppingCartItems(products))
   );
 
-export const fetchProduct = id => dispatch =>
-  ProductAPIUtil.fetchProduct(id).then(payload =>
-    dispatch(receiveProduct(payload))
+export const fetchShoppingCartItem = id => dispatch =>
+  ShoppingCartItemAPIUtil.fetchShoppingCartItem(id).then(payload =>
+    dispatch(receiveShoppingCartItem(payload))
   );
 
 
-export const createProduct = product => dispatch =>
-  ProductAPIUtil.createProduct(product).then(
-    payload => dispatch(receiveProduct(payload)),
-    err => dispatch(receiveErrors(err.responseJSON))
+export const createShoppingCartItem = product => dispatch =>
+  ShoppingCartItemAPIUtil.createShoppingCartItem(product).then(
+    payload => dispatch(receiveShoppingCartItem(payload)),
+    err => dispatch(receiveShoppingCartItemErrors(err.responseJSON))
   );
 
-export const updateProduct = product => dispatch =>
-  ProductAPIUtil.updateProduct(product).then(
-    payload => dispatch(receiveProduct(payload)),
-    err => dispatch(receiveErrors(err.responseJSON))
+export const updateShoppingCartItem = product => dispatch =>
+  ShoppingCartItemAPIUtil.updateShoppingCartItem(product).then(
+    payload => dispatch(receiveShoppingCartItem(payload)),
+    err => dispatch(receiveShoppingCartItemErrors(err.responseJSON))
   );
 
-export const deleteProduct = id => dispatch =>
-  ProductAPIUtil.deleteProduct(id).then(payload =>
-    dispatch(removeProduct(payload.product.id))
+export const deleteShoppingCartItem = id => dispatch =>
+  ShoppingCartItemAPIUtil.deleteShoppingCartItem(id).then(payload =>
+    dispatch(removeShoppingCartItem(payload.product.id))
   );
