@@ -1,6 +1,6 @@
-# if @current_user
+if @current_user
 #   @shopping_cart_items.each do |shopping_item|
-#     if @current_user.id === shopping_item.user_id
+    if @current_user.id === @shopping_cart_item.user_id
 
         json.shopping_cart_item do
           json.set! @shopping_cart_item.id do
@@ -30,5 +30,5 @@
         end
 
 #     end
-#   end
-# end
+  end
+end
