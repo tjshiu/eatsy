@@ -2,14 +2,14 @@ import React from "react";
 import ProductIndexItem from "./product_index_item";
 
 class ProductIndex extends React.Component {
-  componentWillMount() {
-    debugger;
-    this.firstLoad = true;
+  constructor(props) {
+    super(props);
+    this.state = { firstLoad: true};
     //Partial fix for a new slice of state which is the loading.
   }
 
   componentDidMount() {
-    this.props.fetchProducts();
+    this.props.fetchProducts().then(() => this.setState({firstLoad: false} ));
   }
 
   componentWillReceiveProps(nextProps) {
@@ -17,8 +17,7 @@ class ProductIndex extends React.Component {
   }
 
   render() {
-    if (this.firstLoad) {
-      this.firstLoad = false;
+    if (this.state.firstLoad) {
       return null;
     }
     const products = this.props.products.map(product => {

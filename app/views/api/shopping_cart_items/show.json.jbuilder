@@ -26,6 +26,7 @@ if @current_user
             json.description @shopping_cart_item.product.description
             json.cost @shopping_cart_item.product.cost
             json.image_url asset_path(@shopping_cart_item.product.image_url)
+            json.shopping_cart_quantity @shopping_cart_item.product.shopping_cart_items.find_by(user_id: current_user.id).quantity
             json.seller do
               json.extract! @shopping_cart_item.product.seller, :username, :image_url, :id
             end
