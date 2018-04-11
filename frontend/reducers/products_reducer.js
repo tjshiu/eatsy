@@ -3,6 +3,10 @@ import {
   RECEIVE_PRODUCT_PAYLOAD,
   REMOVE_PRODUCT
 } from "../actions/product_actions";
+import {
+  RECEIVE_SHOPPING_CART_ITEM_PAYLOAD,
+  RECEIVE_ALL_SHOPPING_CART_ITEMS_PAYLOAD
+} from "../actions/shopping_cart_actions";
 
 import merge from "lodash/merge";
 
@@ -18,6 +22,10 @@ const ProductsReducer = (oldState = {}, action) => {
       let newState = merge({}, oldState);
       delete newState[action.productId];
       return newState;
+    case RECEIVE_SHOPPING_CART_ITEM_PAYLOAD:
+      return merge({}, oldState, action.payload.products);
+    case RECEIVE_ALL_SHOPPING_CART_ITEMS_PAYLOAD:
+      return merge({}, oldState, action.payload.products);
     default:
       return oldState;
   }

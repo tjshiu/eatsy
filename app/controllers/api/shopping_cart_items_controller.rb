@@ -36,6 +36,17 @@ class Api::ShoppingCartItemsController < ApplicationController
     end
   end
 
+  def delete_collection
+    cartIds = params[:cartIds]
+
+    cartIds.each do |cartId|
+      item = ShoppingCartItem.find(cartId)
+      item.destroy
+    end
+
+    render json: {}
+  end
+
   def update
     @shopping_cart_item = ShoppingCartItem.find_by(id: params[:id])
     @current_user = current_user

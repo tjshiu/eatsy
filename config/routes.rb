@@ -3,7 +3,9 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show, :new, :destroy, :update, :edit]
     resource :session, only: [:create, :destroy]
     resources :products, only: [:create, :show, :destroy, :update, :index]
-    resources :shopping_cart_items, only: [:create, :show, :destroy, :update, :index]
+    resources :shopping_cart_items, only: [:create, :show, :destroy, :update, :index] do
+      delete "delete_collection", on: :collection
+    end
   end
 
   root "static_pages#root"

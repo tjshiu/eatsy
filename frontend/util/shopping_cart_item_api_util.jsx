@@ -1,8 +1,8 @@
-export const fetchShoppingCartItems = (optionalUserId) =>
+export const fetchShoppingCartItems = optionalUserId =>
   $.ajax({
     method: "GET",
     url: "/api/shopping_cart_items",
-    data: {user_id: optionalUserId}
+    data: { user_id: optionalUserId }
   });
 
 export const fetchShoppingCartItem = id =>
@@ -29,4 +29,11 @@ export const deleteShoppingCartItem = id =>
   $.ajax({
     method: "DELETE",
     url: `/api/shopping_cart_items/${id}`
+  });
+
+export const deleteShoppingCartItems = cartIds =>
+  $.ajax({
+    method: "DELETE",
+    url: `/api/shopping_cart_items/delete_collection`,
+    data: { cartIds }
   });

@@ -6,10 +6,11 @@ import {
   fetchShoppingCartItem,
   createShoppingCartItem,
   updateShoppingCartItem,
-  deleteShoppingCartItem
+  deleteShoppingCartItem,
+  deleteShoppingCartItems
 } from "./actions/shopping_cart_actions";
-import { deleteProduct } from './actions/product_actions';
-import { fetchUser } from './actions/user_actions';
+import { deleteProduct } from "./actions/product_actions";
+import { fetchUser } from "./actions/user_actions";
 import Root from "./components/root";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.updateShoppingCartItem = updateShoppingCartItem;
   window.deleteShoppingCartItem = deleteShoppingCartItem;
   window.deleteProduct = deleteProduct;
+  window.deleteShoppingCartItems = deleteShoppingCartItems;
   window.fetchUser = fetchUser;
 
   const root = document.getElementById("root");
