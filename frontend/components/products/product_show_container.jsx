@@ -7,14 +7,14 @@ const mapStateToProps = (state, ownProps) => {
   let seller;
   if (product) seller = state.entities.users[product.userId];
   return {
-  product: product,
-  seller: seller,
-  products: state.entities.products
-};
+    product: product,
+    seller: seller,
+    products: state.entities.products
+  };
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchProduct: id => dispatch(fetchProduct(id))
+  fetchProduct: id => dispatch(fetchProduct(id)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductShow);

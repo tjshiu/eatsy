@@ -43,8 +43,8 @@ export const fetchShoppingCartItem = id => dispatch =>
     dispatch(receiveShoppingCartItem(payload))
   );
 
-export const createShoppingCartItem = product => dispatch =>
-  ShoppingCartItemAPIUtil.createShoppingCartItem(product).then(
+export const createShoppingCartItem = item => dispatch =>
+  ShoppingCartItemAPIUtil.createShoppingCartItem(item).then(
     payload => dispatch(receiveShoppingCartItem(payload)),
     err => dispatch(receiveShoppingCartItemErrors(err.responseJSON))
   );

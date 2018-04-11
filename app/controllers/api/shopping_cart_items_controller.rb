@@ -21,7 +21,7 @@ class Api::ShoppingCartItemsController < ApplicationController
     if @shopping_cart_item.save
       render 'api/shopping_cart_items/show'
     else
-      render json: @shopping_cart_item.errors.full_messages, status: 422
+      render json: ['Sorry you must be signed in to Add to Cart'], status: 422
     end
   end
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import ProductShowSellerItems from './product_show_seller_items';
+import NewShoppingCartItemContainer from '../shopping_cart_items/new_shopping_cart_item_container';
 
 class ProductShow extends React.Component {
   constructor(props) {
@@ -12,7 +13,6 @@ class ProductShow extends React.Component {
   }
 
   componentWillUnmount() {
-    debugger;
     console.log(this.props);
   }
 
@@ -32,7 +32,7 @@ class ProductShow extends React.Component {
             </Link>
             <div className='product-show-nav-right-side'>
               <ul className='products-seller-items-container'>
-                {otherProducts.map(product => <ProductShowSellerItems product={product}/> )}
+                {otherProducts.map(product => <ProductShowSellerItems key={`product-items-seller-${product.id}`}product={product}/> )}
               </ul>
               <Link className="products-show-nav-Link" to='/products'>See All Food ></Link>
             </div>
@@ -49,6 +49,11 @@ class ProductShow extends React.Component {
 
             <div className="product-show right-side">
               <h1>{this.props.product.productName}</h1>
+              <div>
+                <NewShoppingCartItemContainer
+                productId={this.props.product.id}
+                itemCost={this.props.product.cost}/>
+              </div>
               <div className="product-show overview">
                 <h2>Overview</h2>
                 <div>{this.props.product.overview}</div>

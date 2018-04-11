@@ -3,6 +3,7 @@ import ProductIndexItem from "./product_index_item";
 
 class ProductIndex extends React.Component {
   componentWillMount() {
+    debugger;
     this.firstLoad = true;
     //Partial fix for a new slice of state which is the loading.
   }

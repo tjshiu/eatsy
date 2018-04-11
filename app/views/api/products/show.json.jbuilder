@@ -20,6 +20,9 @@ json.products do
       json.description product.description
       json.cost product.cost
       json.image_url asset_path(product.image_url)
+      json.seller do
+        json.extract! product.seller, :username, :image_url, :id
+      end
     end
   end
 end
