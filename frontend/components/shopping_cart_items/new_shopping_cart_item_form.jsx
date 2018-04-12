@@ -45,7 +45,6 @@ class NewShoppingCartItemForm extends React.Component {
 
 
     console.log(this.props);
-    debugger;
     if (this.props.itemInCart) {
       let newState = Object.assign({}, this.state);
       newState.quantity = (Number(this.state.quantity) + Number(this.props.itemInCart.quantity));

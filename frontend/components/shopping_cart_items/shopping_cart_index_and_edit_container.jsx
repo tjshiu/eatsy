@@ -10,13 +10,11 @@ import {
 
 const mapStateToProps = (state, ownProps) => ({
   errors: state.errors.shoppingCartItems,
-  userId: state.session.currentUser,
+  user: state.session.currentUser,
   items: Object.keys(state.entities.shoppingCartItems).map(
     id => state.entities.shoppingCartItems[id]
   ),
-  products: Object.keys(state.entities.products).map(
-    id => state.entities.products[id]
-  )
+  products: state.entities.products
 });
 
 const mapDispatchToProps = dispatch => ({

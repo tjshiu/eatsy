@@ -6,6 +6,7 @@ if @current_user
         json.set! shopping_cart_item.id do
           json.extract! shopping_cart_item, :id, :user_id, :product_id, :quantity
           json.price shopping_cart_item.product.cost
+          json.total_cost (shopping_cart_item.product.cost * shopping_cart_item.product.shopping_cart_items.find_by(user_id: current_user.id).quantity).round(2)
         end
       end
 
@@ -28,7 +29,6 @@ if @current_user
           json.cost shopping_cart_item.product.cost
           json.image_url asset_path(shopping_cart_item.product.image_url)
           json.shopping_cart_quantity shopping_cart_item.product.shopping_cart_items.find_by(user_id: current_user.id).quantity
-          json.total_cost (shopping_cart_item.product.cost * shopping_cart_item.product.shopping_cart_items.find_by(user_id: current_user.id).quantity).round(2)
           json.seller do
             json.extract! shopping_cart_item.product.seller, :username, :image_url, :id
           end

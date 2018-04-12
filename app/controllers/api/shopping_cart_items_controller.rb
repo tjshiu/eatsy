@@ -52,7 +52,7 @@ class Api::ShoppingCartItemsController < ApplicationController
     @current_user = current_user
 
     if @shopping_cart_item.update(shopping_cart_item_params)
-      render 'api/shopping_cart_items/show'
+      render 'api/shopping_cart_items/index'
     else
       render json: @shopping_cart_item.errors.full_messages, status: 422
     end

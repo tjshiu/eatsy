@@ -31,6 +31,11 @@
   height: 20px;
 }
 
+.products-show-nav-Link:hover {
+  background-color: $lightorange;
+  cursor: pointer;
+}
+
 .product-show-nav-right-side {
   display: flex;
   align-items: center;
