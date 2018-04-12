@@ -14,5 +14,5 @@ class ShoppingCartItem < ApplicationRecord
   validates :user_id, :product_id, :quantity, presence: true
 
   belongs_to :user
-  belongs_to :product, dependent: :destroy
+  belongs_to :product
 end

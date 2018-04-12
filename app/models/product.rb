@@ -21,5 +21,5 @@ class Product < ApplicationRecord
     primary_key: :id,
     class_name: :User
 
-  has_many :shopping_cart_items
+  has_many :shopping_cart_items, dependent: :destroy
 end

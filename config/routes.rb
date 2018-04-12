@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :shopping_cart_items, only: [:create, :show, :destroy, :update, :index] do
       delete "delete_collection", on: :collection
     end
+    resources :search, only: [:index]
   end
 
   root "static_pages#root"
