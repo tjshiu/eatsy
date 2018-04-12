@@ -40,6 +40,12 @@ const sessionReducer = (state = _nullUser, action) => {
       newState = merge({}, state);
       newState.currentUser.shoppingCartItemsIds = [];
       return newState;
+    // case REMOVE_PRODUCT:
+    //   newState = merge({}, state);
+    //   let matchingShoppingCartItem = newState.shoppingCartItemsIds.filter(id => id.productId === action.productId);
+    //   let deleteId = matchingShoppingCartItem[0].id;
+    //   delete newState[deleteId];
+    //   return newState;
     default:
       return state;
   }
