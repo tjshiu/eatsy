@@ -15,7 +15,7 @@ class NavBar extends React.Component {
         <button
           className="Register"
           onClick={() => this.props.openModal("register")}
-          >
+        >
           Register
         </button>
         <button
@@ -34,7 +34,12 @@ class NavBar extends React.Component {
   personalGreeting() {
     return (
       <React.Fragment>
-        <Link to={`/users/${this.props.currentUser.id}`} className="header-name">Hi, {this.props.currentUser.username}!</Link>
+        <Link
+          to={`/users/${this.props.currentUser.id}`}
+          className="header-name"
+        >
+          Hi, {this.props.currentUser.username}!
+        </Link>
         <button className="logout" onClick={this.props.logout}>
           Log Out
         </button>
@@ -50,7 +55,7 @@ class NavBar extends React.Component {
 
   render() {
     return (
-      <div className='NavBar-Container'>
+      <div className="NavBar-Container">
         <nav className="NavBar">
           <div className="NavBarLeft">
             <Link to="/" className="header-link">
@@ -59,12 +64,14 @@ class NavBar extends React.Component {
             <h3>Search</h3>
           </div>
           <div className="NavBarRight">
-            <Link className='sell-link' to="/products/new" className='Register'>Sell on Eatsy</Link>
+            <Link className="sell-link" to="/products/new" className="Register">
+              Sell on Eatsy
+            </Link>
             {this.Greeting()}
-            <div className='cart'>
-              <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-              <div className='cart-label'>Cart</div>
-            </div>
+            <Link to="/shoppingcart" className="cart">
+              <i className="fa fa-shopping-cart" aria-hidden="true" />
+              <div className="cart-label">Cart</div>
+            </Link>
           </div>
         </nav>
       </div>

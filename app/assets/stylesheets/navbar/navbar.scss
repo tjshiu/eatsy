@@ -88,15 +88,18 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  text-decoration: none;
 }
 
-.fa {
+.fa.fa-shopping-cart {
   font-size: 20px;
   color: grey;
+  text-decoration: none;
 }
 
 .cart-label {
   color: $darkgrey;
   margin-top: 3px;
   font-size: 14px;
+  text-decoration: none;
 }

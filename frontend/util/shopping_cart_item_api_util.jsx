@@ -18,12 +18,12 @@ export const createShoppingCartItem = shoppingCartItem =>
     data: { shoppingCartItem }
   });
 
-export const updateShoppingCartItem = shoppingCartItem =>
-  $.ajax({
+export const updateShoppingCartItem = shoppingCartItem => {
+  return $.ajax({
     method: "PATCH",
     url: `/api/shopping_cart_items/${shoppingCartItem.id}`,
     data: { shoppingCartItem }
-  });
+  });};
 
 export const deleteShoppingCartItem = id =>
   $.ajax({

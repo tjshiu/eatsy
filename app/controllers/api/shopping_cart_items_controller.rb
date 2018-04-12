@@ -59,6 +59,6 @@ class Api::ShoppingCartItemsController < ApplicationController
   end
 
   def shopping_cart_item_params
-    params.require(:shoppingCartItem).permit(:user_id, :product_id, :quantity)
+    params.require(:shoppingCartItem).permit(:user_id, :product_id, :quantity, :id)
   end
 end
