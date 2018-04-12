@@ -9,7 +9,7 @@ import {
   deleteShoppingCartItem,
   deleteShoppingCartItems
 } from "./actions/shopping_cart_actions";
-import { deleteProduct } from "./actions/product_actions";
+import { deleteProduct, searchProducts } from "./actions/product_actions";
 import { fetchUser } from "./actions/user_actions";
 import Root from "./components/root";
 
@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.deleteProduct = deleteProduct;
   window.deleteShoppingCartItems = deleteShoppingCartItems;
   window.fetchUser = fetchUser;
+  window.searchProducts = searchProducts;
 
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root);

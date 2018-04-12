@@ -26,8 +26,11 @@ const ShoppingCartItemsReducer = (oldState = {}, action) => {
     case REMOVE_PRODUCT:
       newState = merge({}, oldState);
       let matchingShoppingCartItem = Object.values(newState).filter(object => object.productId === action.productId);
-      let deleteId = matchingShoppingCartItem[0].id;
-      delete newState[deleteId];
+      if (matchingShoppingCartItem.length === 1) {
+        let deleteId = matchingShoppingCartItem[0].id;
+        delete newState[deleteId];
+        return newState;
+      }
       return newState;
     default:
       return oldState;

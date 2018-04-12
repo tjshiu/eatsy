@@ -15,7 +15,7 @@ const UserReducer = (oldState = {}, action) => {
       return merge({}, oldState, { [action.user.id]: action.user });
     case RECEIVE_PRODUCT_PAYLOAD:
       // return merge({}, oldState, { [action.product.id]: action.product });
-      let newState = merge({}, oldState, action.payload.seller);
+      let newState = merge({}, action.payload.seller);
       return newState;
     case RECEIVE_SHOPPING_CART_ITEM_PAYLOAD:
       return merge({}, oldState, action.payload.users);

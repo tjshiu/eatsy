@@ -9,7 +9,11 @@ class ProductIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchProducts().then(() => this.setState({firstLoad: false} ));
+    if(this.props.match.path !== '/search') {
+      this.props.fetchProducts().then(() => this.setState({firstLoad: false} ));
+    } else {
+      this.setState({firstLoad: false});
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -20,11 +24,19 @@ class ProductIndex extends React.Component {
     if (this.state.firstLoad) {
       return null;
     }
-    const products = this.props.products.map(product => {
+    let products = this.props.products.map(product => {
       return (
         <ProductIndexItem key={`product-${product.id}`} product={product} />
       );
     });
+
+    if (products.length === 0) {
+      products =
+        <div className='search-no-matches'>
+          <img src="http://res.cloudinary.com/dwanjkcku/image/upload/v1523240984/sad_orange.png" />
+          <div>Sorry! No Matches!</div>
+        </div>;
+    }
 
     // <div className="index-side-search">Search Box</div>
     return (

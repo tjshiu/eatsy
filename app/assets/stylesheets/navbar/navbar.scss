@@ -29,7 +29,8 @@ header {
 .NavBarLeft {
   display: flex;
   align-items: center;
-  width: 400px;
+  width: 700px;
+  min-width: 600px;
 }
 
 .NavBarRight {
@@ -102,4 +103,33 @@ header {
   margin-top: 3px;
   font-size: 14px;
   text-decoration: none;
+}
+
+.search-form:focus {
+}
+
+.search-form {
+  .search-input {
+    padding-left: 3px;
+    height: 24px;
+    font-size: 15px;
+    width: 300px;
+
+  }
+
+  .search-input:focus {
+    outline: 1px solid $orange;
+  }
+
+  .search-submit {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    height: 30px;
+    font-size: 15px;
+    background-color: $orange;
+    color: white;
+    width: 70px;
+    right: 5px;
+    position: relative;
+  }
 }
