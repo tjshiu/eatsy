@@ -39,14 +39,14 @@ class ShoppingCartItem extends React.Component {
     return (
       <li>
         <ul className='shopping-cart-item'>
-          <li key={`product-detail-cart-item-${this.props.item.id}`}>
-            <img src={product.imageUrl} />
+          <li className='image-shop-item' key={`product-detail-cart-item-${this.props.item.id}`}>
+            <Link to={`/products/${product.id}`}><img src={product.imageUrl} /></Link>
           </li>
-          <li>
-            <Link to={`/products/${product.id}`}>{product.productName}</Link>
+          <li className='product-detail-link-delete'>
+            <Link className='product-detail-link' to={`/products/${product.id}`}>{product.productName}</Link>
             <button onClick={() => this.props.delete(this.props.item.id)}>Remove</button>
           </li>
-          <li key={`product-detail-quantity-cart-item-${this.props.item.id}`}>
+          <li className='quantity-edit' key={`product-detail-quantity-cart-item-${this.props.item.id}`}>
             <form onSubmit={this.handleSubmit}>
               <label onSubmit={this.handleSubmit}>
                 Quantity:
@@ -59,13 +59,13 @@ class ShoppingCartItem extends React.Component {
                   onChange={this.update("quantity")}
                   />
               </label>
-              <input type="submit" value={"Update"} />
+              <input className='quantity-update' type="submit" value={"Update"} />
             </form>
           </li>
-          <li>
-            <ul>
-              <li>${this.props.item.totalCost}</li>
-              <li>(${this.props.item.price} each)</li>
+          <li className='item-cost-detail-container'>
+            <ul className='item-cost-detail'>
+              <li className='tot-price'>${this.props.item.totalCost.toFixed(2)}</li>
+              <li className='ind-price'>(${this.props.item.price.toFixed(2)} each)</li>
             </ul>
           </li>
         </ul>

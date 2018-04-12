@@ -38,7 +38,6 @@ class Api::ShoppingCartItemsController < ApplicationController
 
   def delete_collection
     cartIds = params[:cartIds]
-
     cartIds.each do |cartId|
       item = ShoppingCartItem.find(cartId)
       item.destroy
@@ -52,6 +51,7 @@ class Api::ShoppingCartItemsController < ApplicationController
     @current_user = current_user
 
     if @shopping_cart_item.update(shopping_cart_item_params)
+      @shopping_cart_items = current_user.shopping_cart_items
       render 'api/shopping_cart_items/index'
     else
       render json: @shopping_cart_item.errors.full_messages, status: 422

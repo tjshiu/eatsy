@@ -39,34 +39,36 @@ class ShoppingCart extends React.Component {
           </nav>
 
           <div className='whole-shopping-cart'>
-          {this.props.items.length === 0 ? (
-            <div>No Items in your Cart</div>
-          ) : (
-            <div>
-              <ul>
-                {this.props.items.map(item => (
-                  <ShoppingCartItem
-                    key={`shopping-cart-item-${item.id}`}
-                    delete={this.props.removeProduct}
-                    item={item}
-                    update={this.props.update}
-                    products={this.props.products}
-                  />
-                ))}
-              </ul>
-            </div>
-          )}
+            {this.props.items.length === 0 ? (
+              <div className='no-items'>
+                <img src="http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_299/v1523240984/sad_orange.png" />
+                <div>No Items in your Cart</div>
+              </div>
+            ) : (
+              <div className='item-container'>
+                <ul>
+                  {this.props.items.map(item => (
+                    <ShoppingCartItem
+                      key={`shopping-cart-item-${item.id}`}
+                      delete={this.props.removeProduct}
+                      item={item}
+                      update={this.props.update}
+                      products={this.props.products}
+                    />))}
+                </ul>
+              </div>
+            )}
 
-          <div className="checkout-container">
-            <div>Item(s) total: {totalSum.toFixed(2)}</div>
-            <button
-              onClick={() =>
-                this.props.checkout(this.props.user.shoppingCartItemsIds)
-              }>
-              Checkout
-            </button>
+            <div className="checkout-container">
+              <div>Item(s) Total: ${totalSum.toFixed(2)}</div>
+              <button
+                onClick={() =>
+                  this.props.checkout(this.props.user.shoppingCartItemsIds)
+                }>
+                Checkout
+              </button>
+            </div>
           </div>
-        </div>
       </div>
     );
   }

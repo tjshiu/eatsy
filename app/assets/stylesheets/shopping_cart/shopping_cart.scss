@@ -1,20 +1,38 @@
 @import "base/global.scss";
 
-
 .whole-shopping-cart-container {
-  background-color: $superlightgrey;
+  bottom: 0;
+
+  .no-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 200px;
+      width: 200px;
+      margin: 20px
+    }
+
+    div {
+      font-size: 30px;
+    }
+  }
 
   h1 {
     padding: 20px;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .whole-shopping-cart {
     margin-left: 20%;
     margin-right: 20%;
-    padding-top: 20px;
     background-color: white;
+    min-width: 700px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
   }
 
   nav {
@@ -22,8 +40,10 @@
     justify-content: space-between;
     margin-left: 21%;
     margin-right: 21%;
+    margin-bottom: 20px;
     align-items: center;
-    
+    min-width: 700px;
+
 
     .keepShopping {
       text-decoration: none;
@@ -36,6 +56,7 @@
       border: 1px solid $orange;
       border-radius: 5px;
       height: 20px;
+      background-color: white;
     }
 
     .keepShopping:hover {
@@ -53,14 +74,147 @@
   }
 }
 
+.item-container, .no-items {
+  width: 80%;
+  border: 1px solid grey;
+  min-width: 800px;
+}
+
 .shopping-cart-item {
   display: flex;
   padding: 10px;
   border: 1px solid $lightgrey;
+  height: 100%;
+  min-width: 700px;
+
+  .image-shop-item {
+    width: 230px;
+  }
 
   img {
     width: 200px;
     height: 200px;
     object-fit: cover;
   }
-}
+
+  .product-detail-link-delete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    .product-detail-link {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    button {
+      padding-left: 7px;
+      padding-right: 7px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      border: 1px solid lightgrey;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background-color: grey;
+    }
+  }
+
+  .quantity-edit {
+    width: 25%;
+    min-width: 200px;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        #quantity {
+          width: 50px;
+          margin-left: 10px;
+        }
+
+        label {
+          margin-bottom: 10px;
+        }
+        .quantity-update {
+          padding-left: 7px;
+          padding-right: 7px;
+          padding-top: 3px;
+          padding-bottom: 3px;
+          width: 70px;
+          font-size: 14px;
+          text-align: center;
+          border: 1px solid lightgrey;
+        }
+
+        .quantity-update:hover {
+          background-color: grey;
+          cursor: pointer;
+        }
+      }
+    }
+
+
+  }
+
+  .item-cost-detail-container {
+    height: 200px;
+    min-width: 150px;
+
+    .item-cost-detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      .tot-price {
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .ind-price {
+        color: grey;
+      }
+    }
+  }
+
+  .checkout-container {
+    border: 1px solid grey;
+    padding: 30px;
+    height: 100px;
+    min-width: 200px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    div {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 20px
+    }
+
+    button {
+      width: 100%;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      background-color: $orange;
+      color: white;
+    }
+  }

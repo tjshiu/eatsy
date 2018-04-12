@@ -17,7 +17,7 @@ if @current_user
             json.id @shopping_cart_item.user.id
             json.username @shopping_cart_item.user.username
             json.image_url asset_path(@shopping_cart_item.user.image_url)
-            json.shopping_cart_items @shopping_cart_item.user.shopping_cart_item_ids
+            json.shopping_cart_items_ids @shopping_cart_item.user.shopping_cart_item_ids
           end
         end
 
