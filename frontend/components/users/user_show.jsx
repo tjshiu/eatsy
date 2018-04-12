@@ -17,7 +17,7 @@ class UserShow extends React.Component {
   }
 
   render() {
-    if (!this.props.user || !this.props.products) return null;
+    if (!this.props.user) return null;
     if (this.state.firstLoad) return null;
     return (
       <div className="users-show-whole-page">
