@@ -132,4 +132,7 @@ header {
     right: 5px;
     position: relative;
   }
+  .search-submit:focus {
+    outline: none;
+  }
 }

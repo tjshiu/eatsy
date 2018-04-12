@@ -89,6 +89,10 @@
   padding-bottom: 3px;
 }
 
+.session-submit:focus, .demo-button:focus {
+  outline: none;
+}
+
 .demo-button {
   background: $orange;
 }
