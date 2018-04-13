@@ -15,10 +15,40 @@ b = User.create(username: 'Mediterranean foodie', password: 'password', email: "
 c = User.create(username: "Andie", password: 'password', email: "andie@u.com")
 d = User.create(username: 'BossCake', password: 'password', email: "bosscake@bosscake.com")
 e = User.create(username: 'Demo User', password: 'password', email: 'demo@demo.com')
+f = User.create(username: 'Fisherman', password: 'password', email: "firsherman@fisherman.com")
+g = User.create(username: 'Krispy', password: 'password', email: "krispycreamy@krispy.com")
+h = User.create(username: "Kristin", password: 'password', email: 'kristin@kristen.com')
+i = User.create(username: 'VietnameseCoffee', password: 'password', email: 'kevin@kevin.com')
 
 
-
-
+product12= Product.create(product_name: "Funky Fresh Donuts",
+  overview: "The Donut says it all.",
+  description: "Buy this six pack of donuts, which are 6 unique mystery flavors.",
+  cost: 10.00,
+  image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1522981606/pink_donuts.jpg",
+  user_id: g.id
+)
+product13= Product.create(product_name: "Simply Glazed Donuts",
+  overview: "The Donut says it all.",
+  description: "We sell our famous glazed donuts now! Enjoy this simple and delicate creation.",
+  cost: 3.00,
+  image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1522981609/glazed_donuts.jpg",
+  user_id: g.id
+)
+product14= Product.create(product_name: "Macaron and Tea",
+  overview: "Macarons and our favorite English Tea",
+  description: "These small delicate macaron's can be enjoyed with our favorite English Tea. We send you a dozen of our chef's favorite flavors for you to enjoy.",
+  cost: 20.00,
+  image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1522965914/macaron_and_tea.jpg",
+  user_id: h.id
+)
+product15= Product.create(product_name: "Macaron for Two or One",
+  overview: "Macarons made by Kristin",
+  description: "Enjoy our love inspired macarons. Our flavors are chocolate, strawberry, orange, and green tea. We send you a dozen of these love macarons, but we don't blame you if you just want to eat all for yourself",
+  cost: 3.00,
+  image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1522981606/macaron_love.jpg",
+  user_id: h.id
+)
 product1= Product.create(product_name: "Mama's Favorite Chocolate Cake",
   overview: "Two-tiered Chocolate Cake with our Award-winning white buttercream frosting",
   description: "Enjoy our homemade mama's favorite chocolate cake, which started three generations ago. The recipe is a secret family recipe and is served with our award-winning white buttercream frosting. We send the cake within 1 business day and will arrive depending on how far you live.",
@@ -90,11 +120,25 @@ product10 = Product.create(product_name: 'Beef Tacos',
   user_id: c.id
 )
 
-shopping1 = ShoppingCartItem.create(user_id: e.id, product_id: product1.id, quantity: 2);
-shopping2 = ShoppingCartItem.create(user_id: e.id, product_id: product3.id, quantity: 3);
-shopping3 = ShoppingCartItem.create(user_id: e.id, product_id: product2.id, quantity: 4);
-shopping4 = ShoppingCartItem.create(user_id: e.id, product_id: product4.id, quantity: 2);
+shopping1 = ShoppingCartItem.create(user_id: e.id, product_id: product1.id, quantity: 1);
+shopping2 = ShoppingCartItem.create(user_id: e.id, product_id: product3.id, quantity: 1);
 shopping5 = ShoppingCartItem.create(user_id: a.id, product_id: product9.id, quantity: 1);
 shopping6 = ShoppingCartItem.create(user_id: a.id, product_id: product10.id, quantity: 2);
 shopping7 = ShoppingCartItem.create(user_id: a.id, product_id: product8.id, quantity: 1);
 shopping8 = ShoppingCartItem.create(user_id: a.id, product_id: product7.id, quantity: 2);
+
+product11= Product.create(product_name: "Magestic Muscles",
+  overview: "Enjoy these daintiful muscles caught fresh from the ocean",
+  description: "I go out to the ocean and go fishing for muscles every so often. There is a limited supply so buy while available!",
+  cost: 30.00,
+  image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1522965413/salty_muscles.jpg",
+  user_id: f.id
+)
+
+product16= Product.create(product_name: "Bahn Mi",
+  overview: "VietnameseCoffee's favorite Bahn Mi",
+  description: "Plan your next event with these sandwhiches! We cater to you!",
+  cost: 5.00,
+  image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1522965909/bahn_mi.jpg",
+  user_id: i.id
+)
