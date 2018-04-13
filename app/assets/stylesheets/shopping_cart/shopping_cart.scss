@@ -60,6 +60,7 @@
       border: 1px solid $orange;
       border-radius: 5px;
       height: 20px;
+      position: relative;
     }
 
     .keepShopping:hover {
@@ -125,12 +126,11 @@
       padding-right: 7px;
       padding-top: 3px;
       padding-bottom: 3px;
-      border: 1px solid lightgrey;
+      border: 0px;
     }
 
     button:hover {
-      cursor: pointer;
-      background-color: grey;
+      text-decoration: underline;
     }
   }
 
@@ -146,8 +146,9 @@
         height: 100%;
 
         #quantity {
-          width: 50px;
-          margin-left: 10px;
+          width: 35px;
+          margin-left: 5px;
+          text-align: right;
         }
 
         label {
@@ -220,6 +221,7 @@
       padding-top: 3px;
       padding-bottom: 3px;
       background-color: $orange;
+      height: 30px;
       color: white;
     }
   }

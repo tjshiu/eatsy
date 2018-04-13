@@ -20,16 +20,6 @@ class NewShoppingCartItemForm extends React.Component {
     this.props.fetchShoppingCartItems();
   }
 
-  renderErrors() {
-    return (
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>{error}</li>
-        ))}
-      </ul>
-    );
-  }
-
   componentWillUnmount() {
     this.props.clearErrors();
   }
@@ -62,11 +52,10 @@ class NewShoppingCartItemForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div className="errors-container">{this.renderErrors()}</div>
-        <div>$ {this.props.itemCost.toFixed(2)}</div>
+      <form onSubmit={this.handleSubmit} className='create-new-shopping-cart-item-form'>
+        <div className='product-cost-shop-item-form'>$ {this.props.itemCost.toFixed(2)}</div>
         <div>
-          <label>
+          <label className='quantity-new-shopping-cart-item'>
             Quantity:
             <input
               id="quantity"
@@ -78,7 +67,7 @@ class NewShoppingCartItemForm extends React.Component {
             />
           </label>
         </div>
-        <input type="submit" value={"Add To Cart"} />
+        <input id='create-new-item-submit' type="submit" value={"Add To Cart"} />
       </form>
     );
   }

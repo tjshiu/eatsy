@@ -18,9 +18,9 @@ const ShoppingCartItemsReducer = (oldState = {}, action) => {
       delete newState[action.shoppingCartItemId];
       return newState;
     case RECEIVE_SHOPPING_CART_ITEM_PAYLOAD:
-      return merge({}, oldState, action.payload.shoppingCartItems);
+      return merge({}, action.payload.shoppingCartItems);
     case RECEIVE_ALL_SHOPPING_CART_ITEMS_PAYLOAD:
-      return merge({}, oldState, action.payload.shoppingCartItems);
+      return merge({}, action.payload.shoppingCartItems);
     case REMOVE_SHOPPING_CART_ITEMS:
       return action.emptyCart;
     case REMOVE_PRODUCT:

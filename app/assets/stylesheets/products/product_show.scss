@@ -90,6 +90,40 @@
   margin-bottom: 10px;
 }
 
+.create-new-shopping-cart-item-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-left: 10px;
+  height: 100px;
+
+  .product-cost-shop-item-form {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .quantity-new-shopping-cart-item {
+    #quantity {
+      text-align: right;
+      margin-left: 5px;
+      width: 35px;
+    }
+  }
+
+  #create-new-item-submit {
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 15px;
+    height: 35px;
+    width: 400px;
+    background-color: $orange;
+    color: white;
+  }
+}
+
 
 .product-show.left-side img{
   padding: 5px;

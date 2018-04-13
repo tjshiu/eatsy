@@ -12,7 +12,7 @@ const UserReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   switch (action.type) {
     case RECEIVE_USER:
-      return merge({}, oldState, { [action.user.id]: action.user });
+      return merge({}, { [action.user.id]: action.user });
     case RECEIVE_PRODUCT_PAYLOAD:
       // return merge({}, oldState, { [action.product.id]: action.product });
       let newState = merge({}, action.payload.seller);
@@ -20,7 +20,11 @@ const UserReducer = (oldState = {}, action) => {
     case RECEIVE_SHOPPING_CART_ITEM_PAYLOAD:
       return merge({}, oldState, action.payload.users);
     case RECEIVE_ALL_SHOPPING_CART_ITEMS_PAYLOAD:
-      return merge({}, oldState, action.payload.users);
+      newState = merge({}, oldState);
+      if (action.payload.users) {
+        newState[Object.keys(action.payload.users)[0]] = Object.values(action.payload.users)[0];
+      }
+      return newState;
     default:
       return oldState;
   }

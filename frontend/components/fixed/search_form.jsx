@@ -21,7 +21,10 @@ class SearchForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.search(this.state.product_name)
-    .then((products) => this.props.history.push("/search"));
+    .then((products) => {
+      this.setState({product_name: ""});
+      this.props.history.push("/search");
+    });
   }
 
 
@@ -39,6 +42,7 @@ class SearchForm extends React.Component {
       <input
         className='search-submit'
         type="submit"
+        value='Search'
         />
       </form>
     </div>
