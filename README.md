@@ -70,9 +70,9 @@ In addition to the included packages, [Cloudinary](https://cloudinary.com/) was 
 
 
 ### Additional Resources
-* [https://github.com/tjshiu/eatsy/wiki/Component-Hierarchy-with-Wireframes](Proposal Wireframes)
-* [https://github.com/tjshiu/eatsy/wiki/Sample-State](Sample State)
-* [https://github.com/tjshiu/eatsy/wiki/Database-Schema](Database Schema)
+* [Proposal Wireframes](https://github.com/tjshiu/eatsy/wiki/Component-Hierarchy-with-Wireframes)
+* [Sample State](https://github.com/tjshiu/eatsy/wiki/Sample-State)
+* [Database Schema](https://github.com/tjshiu/eatsy/wiki/Database-Schema)
 
 
 ## Possible Future Features
