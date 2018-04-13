@@ -13,7 +13,6 @@ class ProductShow extends React.Component {
   }
 
   componentWillUnmount() {
-    console.log(this.props);
   }
 
   render() {

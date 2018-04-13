@@ -16,10 +16,6 @@ class ProductIndex extends React.Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
-  }
-
   render() {
     if (this.state.firstLoad) {
       return null;

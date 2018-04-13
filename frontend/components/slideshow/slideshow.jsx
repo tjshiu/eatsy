@@ -8,7 +8,7 @@ class SimpleSlider extends React.Component {
       infinite: true,
       speed: 1200,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
     };
     return (
       <Slider className="SliderContainer"{...settings}>
