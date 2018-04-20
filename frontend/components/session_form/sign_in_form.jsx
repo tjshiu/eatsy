@@ -23,7 +23,12 @@ class SignInForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then((user) => this.props.closeModal());
+    this.props.processForm(user).then((user) => {
+      this.props.closeModal();
+      if (this.props.match.path === "/" && this.props.match.isExact) {
+        this.props.history.push("/products");
+      }
+    });
   }
 
   renderErrors() {
@@ -38,7 +43,12 @@ class SignInForm extends React.Component {
 
   handleDemo(e) {
     e.preventDefault();
-    this.props.loginDemo().then((user) => this.props.closeModal());
+    this.props.loginDemo().then((user) => {
+      this.props.closeModal();
+      if (this.props.match.path === "/" && this.props.match.isExact) {
+        this.props.history.push("/products");
+      }
+    });
   }
 
   componentWillUnmount() {

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { signIn, receiveErrors } from "../../actions/session_actions";
 import { openModal, closeModal } from "../../actions/modal_actions";
 import SignInForm from "./sign_in_form";
+import { withRouter } from "react-router-dom";
 
 const mapStateToProps = ({ errors }) => {
   return {
@@ -25,4 +26,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignInForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SignInForm));

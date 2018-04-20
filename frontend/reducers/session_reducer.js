@@ -7,6 +7,7 @@ import {
   REMOVE_SHOPPING_CART_ITEM,
   REMOVE_SHOPPING_CART_ITEMS
 } from "../actions/shopping_cart_actions";
+import { RECEIVE_PRODUCT_PAYLOAD } from "../actions/product_actions";
 
 const _nullUser = Object.freeze({
   currentUser: null
@@ -46,6 +47,9 @@ const sessionReducer = (state = _nullUser, action) => {
     //   let deleteId = matchingShoppingCartItem[0].id;
     //   delete newState[deleteId];
     //   return newState;
+    case RECEIVE_PRODUCT_PAYLOAD:
+      newState = merge({}, state, {currentUser: action.payload.seller});
+      return newState;
     default:
       return state;
   }
