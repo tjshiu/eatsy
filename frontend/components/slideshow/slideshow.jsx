@@ -9,6 +9,7 @@ class SimpleSlider extends React.Component {
       speed: 1200,
       slidesToShow: 1,
       slidesToScroll: 1,
+      autoplay: true,
     };
     return (
       <Slider className="SliderContainer"{...settings}>

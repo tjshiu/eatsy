@@ -48,8 +48,10 @@ const sessionReducer = (state = _nullUser, action) => {
     //   delete newState[deleteId];
     //   return newState;
     case RECEIVE_PRODUCT_PAYLOAD:
-      newState = merge({}, state, {currentUser: action.payload.seller});
-      return newState;
+      if (action.payload.seller[state.currentUser.id]) {
+        newState = merge({}, state, {currentUser: action.payload.seller[state.currentUser.id]});
+        return newState;
+      }
     default:
       return state;
   }
