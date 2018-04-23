@@ -38,14 +38,14 @@ product13= Product.create(product_name: "Simply Glazed Donuts",
 product14= Product.create(product_name: "Macaron and Tea",
   overview: "Macarons and our favorite English Tea",
   description: "These small delicate macaron's can be enjoyed with our favorite English Tea. We send you a dozen of our chef's favorite flavors for you to enjoy.",
-  cost: 20.00,
+  cost: 19.99,
   image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1522965914/macaron_and_tea.jpg",
   user_id: h.id
 )
-product15= Product.create(product_name: "Macaron for Two or One",
+product15= Product.create(product_name: "Macarons for Two or One",
   overview: "Macarons made by Kristin",
   description: "Enjoy our love inspired macarons. Our flavors are chocolate, strawberry, orange, and green tea. We send you a dozen of these love macarons, but we don't blame you if you just want to eat all for yourself",
-  cost: 3.00,
+  cost: 19.99,
   image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1522981606/macaron_love.jpg",
   user_id: h.id
 )
@@ -70,9 +70,9 @@ product3 = Product.create(product_name: 'Naked Citrus Cake',
   image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1522981611/naked_cake.jpg",
   user_id: d.id
 )
-product4 = Product.create(product_name: 'Rasberry Chocolate Stacks',
+product4 = Product.create(product_name: 'Raspberry Chocolate Stacks',
   overview: "Layers and Layers of cake with chocolate inbetween",
-  description: "Locally grown rasberries ontop of our seductive chocolate cake. We make stacks and stacks of cake layers and cover it with our thickest chocolate ganache. We send the cake within 1 business day and will arrive depending on how far you live.",
+  description: "Locally grown raspberries ontop of our seductive chocolate cake. We make stacks and stacks of cake layers and cover it with our thickest chocolate ganache. We send the cake within 1 business day and will arrive depending on how far you live.",
   cost: 20.00,
   image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1522965913/chocolate_stacks.jpg",
   user_id: d.id
