@@ -148,4 +148,11 @@
   color: $darkgrey;
   border-top: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
+  
+  div {
+    width: 100%;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    height: 300px;
+  }
 }

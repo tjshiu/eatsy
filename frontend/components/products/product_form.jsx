@@ -165,6 +165,7 @@ class ProductForm extends React.Component {
                 id="cost"
                 type="number"
                 min="0.00"
+                max="999999999999.99"
                 step="0.01"
                 value={this.state.cost}
                 onChange={this.update("cost")}
