@@ -13,31 +13,31 @@ The project was built within a two-week timeframe. I do plan on continuing with 
 * Users can also search for products by their name.
 * Products/food support images.
 
-![Homepage](http://res.cloudinary.com/dwanjkcku/image/upload/v1523655560/uploaded_images/Screen_Shot_2018-04-13_at_2.37.50_PM.png)
+![Homepage](https://res.cloudinary.com/dwanjkcku/image/upload/v1523655560/uploaded_images/Screen_Shot_2018-04-13_at_2.37.50_PM.png)
 
 ### Sign In and Register
 
-![Sign In & Register](http://res.cloudinary.com/dwanjkcku/image/upload/v1523655560/uploaded_images/Screen_Shot_2018-04-13_at_2.32.04_PM.png)
+![Sign In & Register](https://res.cloudinary.com/dwanjkcku/image/upload/v1523655560/uploaded_images/Screen_Shot_2018-04-13_at_2.32.04_PM.png)
 
 ### Search
 
-![Search](http://res.cloudinary.com/dwanjkcku/image/upload/v1523655559/uploaded_images/Screen_Shot_2018-04-13_at_2.20.54_PM.png)
+![Search](https://res.cloudinary.com/dwanjkcku/image/upload/v1523655559/uploaded_images/Screen_Shot_2018-04-13_at_2.20.54_PM.png)
 
 ### Add to Cart
 
-![Add to Cart](http://res.cloudinary.com/dwanjkcku/image/upload/v1523655560/uploaded_images/Screen_Shot_2018-04-13_at_2.35.29_PM.png)
+![Add to Cart](https://res.cloudinary.com/dwanjkcku/image/upload/v1523655560/uploaded_images/Screen_Shot_2018-04-13_at_2.35.29_PM.png)
 
 ### Shopping Cart
 
-![Shopping Cart](http://res.cloudinary.com/dwanjkcku/image/upload/v1523655559/uploaded_images/Screen_Shot_2018-04-13_at_2.35.41_PM.png)
+![Shopping Cart](https://res.cloudinary.com/dwanjkcku/image/upload/v1523655559/uploaded_images/Screen_Shot_2018-04-13_at_2.35.41_PM.png)
 
 ### User's Profile
 
-![Profile](http://res.cloudinary.com/dwanjkcku/image/upload/v1523655560/uploaded_images/Screen_Shot_2018-04-13_at_2.35.56_PM.png)
+![Profile](https://res.cloudinary.com/dwanjkcku/image/upload/v1523655560/uploaded_images/Screen_Shot_2018-04-13_at_2.35.56_PM.png)
 
 ### Editing A Product
 
-![Edit a Product](http://res.cloudinary.com/dwanjkcku/image/upload/v1523655560/uploaded_images/Screen_Shot_2018-04-13_at_2.36.26_PM.png)
+![Edit a Product](https://res.cloudinary.com/dwanjkcku/image/upload/v1523655560/uploaded_images/Screen_Shot_2018-04-13_at_2.36.26_PM.png)
 
 ```Javascript
 // This will prevent people from hacking to the edit page. If they go to the product show page
