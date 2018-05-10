@@ -47,7 +47,7 @@ class User < ApplicationRecord
   end
 
   def ensure_image_url
-    self.image_url ||= "http://res.cloudinary.com/dwanjkcku/image/upload/v1523240992/happy_orange.png"
+    self.image_url ||= "https://res.cloudinary.com/dwanjkcku/image/upload/v1523240992/happy_orange.png"
   end
 
   def reset_session_token!
