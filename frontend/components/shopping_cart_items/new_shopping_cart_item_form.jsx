@@ -20,8 +20,24 @@ class NewShoppingCartItemForm extends React.Component {
     this.props.fetchShoppingCartItems();
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.productId !== nextProps.match.params.productId) {
+      this.props.clearErrors();
+    }
+  }
+
   componentWillUnmount() {
     this.props.clearErrors();
+  }
+
+  renderErrors() {
+    return (
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>{error}</li>
+        ))}
+      </ul>
+    );
   }
 
   update(field) {
@@ -50,23 +66,26 @@ class NewShoppingCartItemForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className='create-new-shopping-cart-item-form'>
-        <div className='product-cost-shop-item-form'>$ {this.props.itemCost.toFixed(2)}</div>
-        <div>
-          <label className='quantity-new-shopping-cart-item'>
-            Quantity:
-            <input
-              id="quantity"
-              type="number"
-              min="1"
-              step="1"
-              value={this.state.quantity}
-              onChange={this.update("quantity")}
-            />
-          </label>
-        </div>
-        <input id='create-new-item-submit' type="submit" value={"Add To Cart"} />
-      </form>
+      <div>
+        <form onSubmit={this.handleSubmit} className='create-new-shopping-cart-item-form'>
+          <div className='product-cost-shop-item-form'>$ {this.props.itemCost.toFixed(2)}</div>
+          <div>
+            <label className='quantity-new-shopping-cart-item'>
+              Quantity:
+              <input
+                id="quantity"
+                type="number"
+                min="1"
+                step="1"
+                value={this.state.quantity}
+                onChange={this.update("quantity")}
+              />
+            </label>
+          </div>
+          <input id='create-new-item-submit' type="submit" value={"Add To Cart"} />
+          <div className="shopping-errors">{this.renderErrors()}</div>
+        </form>
+      </div>
     );
   }
 }

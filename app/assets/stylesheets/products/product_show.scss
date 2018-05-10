@@ -102,6 +102,8 @@
   padding-top: 15px;
   padding-left: 10px;
   height: 100px;
+  position: relative;
+  padding-bottom: 20px;
 
   .product-cost-shop-item-form {
     font-size: 20px;
@@ -126,6 +128,19 @@
     width: 400px;
     background-color: $orange;
     color: white;
+  }
+
+  #create-new-item-submit:hover {
+    cursor: pointer;
+  }
+  
+  .shopping-errors {
+    font-size: 15px;
+    text-align: center;
+    width: 400px;
+    color: red;
+    position: absolute;
+    bottom: -7px;
   }
 }
 
