@@ -1,15 +1,20 @@
 @import "base/global.scss";
 
 .whole-shopping-cart-container {
-  background-color: $superlightgrey;
   padding-bottom: 20px;
-  min-height: 900px;
+  min-height: 80vh;
+  // border: 1px solid lightgrey;
+  // box-shadow: 0px 0px 5px lightgrey;
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
 
   .no-items {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
+    box-shadow: 0px 0px 5px lightgrey;
 
     img {
       height: 200px;
@@ -36,23 +41,24 @@
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
-    background-color: $superlightgrey;
   }
 
   nav {
     display: flex;
-    justify-content: space-between;
-    margin-left: 21%;
-    margin-right: 21%;
+    justify-content: center;
+    // margin-left: 21%;
+    // margin-right: 21%;
+    min-width: 1000px;
     margin-bottom: 20px;
     align-items: center;
-    min-width: 700px;
+    // min-width: 700px;
 
 
     .keepShopping {
       text-decoration: none;
       font-size: 20px;
       color: $orange;
+      margin-left: 750px;
       padding-left: 10px;
       padding-right: 10px;
       padding-top: 7px;
@@ -61,6 +67,7 @@
       border-radius: 5px;
       height: 20px;
       position: relative;
+      min-width: 150px;
     }
 
     .keepShopping:hover {
@@ -80,8 +87,9 @@
 
 .item-container, .no-items {
   width: 80%;
-  border: 1px solid grey;
+  border: 1px solid lightgrey;
   min-width: 800px;
+  box-shadow: 0px 0px 5px lightgrey;
 }
 
 .shopping-cart-item {
@@ -166,7 +174,7 @@
         }
 
         .quantity-update:hover {
-          background-color: grey;
+          box-shadow: 0px 0px 5px grey;
           cursor: pointer;
         }
       }
@@ -199,7 +207,7 @@
   }
 
   .checkout-container {
-    border: 1px solid grey;
+    border: 1px solid lightgrey;
     padding: 30px;
     height: 100px;
     min-width: 200px;
@@ -209,6 +217,7 @@
     flex-direction: column;
     align-items: center;
     background-color: white;
+    box-shadow: 0px 0px 5px lightgrey;
 
     div {
       text-align: center;

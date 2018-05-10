@@ -27,7 +27,6 @@ class UserShowProducts extends React.Component {
               {this.props.product.productName}
             </Link>
           </li>
-          <li className="user-index productRating">Rating</li>
           <li className="user-index productCost">
             ${this.props.product.cost.toFixed(2)}
           </li>

@@ -41,7 +41,7 @@ class ShoppingCart extends React.Component {
           <div className='whole-shopping-cart'>
             {this.props.items.length === 0 ? (
               <div className='no-items'>
-                <img src="http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_299/v1523240984/sad_orange.png" />
+                <img src="https://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_299/v1523240984/sad_orange.png" />
                 <div>No Items in your Cart</div>
               </div>
             ) : (
