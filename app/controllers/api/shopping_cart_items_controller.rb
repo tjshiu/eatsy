@@ -15,13 +15,26 @@ class Api::ShoppingCartItemsController < ApplicationController
   end
 
   def create
-    @shopping_cart_item = ShoppingCartItem.new(shopping_cart_item_params)
-    @current_user = current_user
-
-    if @shopping_cart_item.save
-      render 'api/shopping_cart_items/show'
+    ## TODO: fix to have a payload for user sign in
+    check_shopping_cart = current_user ? ShoppingCartItem.find_by({user_id: current_user.id, product_id: shopping_cart_item_params["product_id"]}) : nil
+    if check_shopping_cart
+      check_shopping_cart.quantity += shopping_cart_item_params["quantity"].to_i
+      if check_shopping_cart.save
+        @shopping_cart_items = current_user.shopping_cart_items
+        render 'api/shopping_cart_items/index'
+      else
+        render json: @shopping_cart_item.errors.full_messages, status: 422
+      end
     else
-      render json: ['Sorry you must be signed in to Add to Cart'], status: 422
+      @shopping_cart_item = ShoppingCartItem.new(shopping_cart_item_params)
+      @current_user = current_user
+      @shopping_cart_item.user = @current_user
+
+      if @shopping_cart_item.save
+        render 'api/shopping_cart_items/show'
+      else
+        render json: ["Please Log in to Add to Cart"], status: 422
+      end
     end
   end
 

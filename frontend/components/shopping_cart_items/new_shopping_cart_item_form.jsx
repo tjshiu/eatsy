@@ -8,11 +8,13 @@ class NewShoppingCartItemForm extends React.Component {
     let id;
     if (this.props.user) {
       id = this.props.user.id;
+    } else {
+      id = null;
     }
     this.state = {
       quantity: 1,
       user_id: id,
-      product_id: this.props.productId,
+      product_id: this.props.productId
     };
   }
 
@@ -21,7 +23,9 @@ class NewShoppingCartItemForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.match.params.productId !== nextProps.match.params.productId) {
+    if (
+      this.props.match.params.productId !== nextProps.match.params.productId
+    ) {
       this.props.clearErrors();
     }
   }
@@ -51,7 +55,8 @@ class NewShoppingCartItemForm extends React.Component {
 
     if (this.props.itemInCart) {
       let newState = Object.assign({}, this.state);
-      newState.quantity = (Number(this.state.quantity) + Number(this.props.itemInCart.quantity));
+      newState.quantity =
+        Number(this.state.quantity) + Number(this.props.itemInCart.quantity);
       newState.id = this.props.itemInCart.id;
 
       this.props
@@ -67,10 +72,15 @@ class NewShoppingCartItemForm extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit} className='create-new-shopping-cart-item-form'>
-          <div className='product-cost-shop-item-form'>$ {this.props.itemCost.toFixed(2)}</div>
+        <form
+          onSubmit={this.handleSubmit}
+          className="create-new-shopping-cart-item-form"
+        >
+          <div className="product-cost-shop-item-form">
+            $ {this.props.itemCost.toFixed(2)}
+          </div>
           <div>
-            <label className='quantity-new-shopping-cart-item'>
+            <label className="quantity-new-shopping-cart-item">
               Quantity:
               <input
                 id="quantity"
@@ -82,7 +92,11 @@ class NewShoppingCartItemForm extends React.Component {
               />
             </label>
           </div>
-          <input id='create-new-item-submit' type="submit" value={"Add To Cart"} />
+          <input
+            id="create-new-item-submit"
+            type="submit"
+            value={"Add To Cart"}
+          />
           <div className="shopping-errors">{this.renderErrors()}</div>
         </form>
       </div>
