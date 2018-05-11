@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   background-color: white;
-  margin-bottom: 40px;
+  box-shadow: 0 0 5px lightgrey;
 }
 
 .product-errors-container {
@@ -72,9 +72,8 @@
 }
 
 .whole-product-form {
-  background-color: $superlightgrey;
   padding-top: 20px;
-  height: 880px;
+  margin-bottom: 20px;
 }
 
 .drop-zone-instructions {
