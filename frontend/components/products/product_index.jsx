@@ -29,7 +29,7 @@ class ProductIndex extends React.Component {
     if (products.length === 0) {
       products =
         <div className='search-no-matches'>
-          <img src="http://res.cloudinary.com/dwanjkcku/image/upload/v1523240984/sad_orange.png" />
+          <img src="https://res.cloudinary.com/dwanjkcku/image/upload/v1523240984/sad_orange.png" />
           <div>Sorry! No Matches!</div>
         </div>;
     }
