@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SearchForm from './search_form';
+import SearchForm from "./search_form";
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -62,7 +62,7 @@ class NavBar extends React.Component {
             <Link to="/" className="header-link">
               <h1 className="Logo">Eatsy</h1>
             </Link>
-            <SearchForm search={this.props.searchProducts}/>
+            <SearchForm search={this.props.searchProducts} />
           </div>
           <div className="NavBarRight">
             <Link className="sell-link" to="/products/new" className="Register">

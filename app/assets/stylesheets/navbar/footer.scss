@@ -1,0 +1,161 @@
+@import "base/global.scss";
+.header-link {
+  text-decoration: none;
+}
+#root {
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+.whole-app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+}
+body {
+  height: 100%
+}
+
+header {
+  background-color: white;
+}
+.Not-Footer {
+
+  flex: 1 0 auto;
+}
+
+.Footer-Container {
+  border-bottom: 1px solid lightgrey;
+  box-shadow: 0px 0px 5px lightgrey;
+  flex-shrink: 0;
+
+}
+
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.header-name {
+  font-size: 17px;
+  color: $orange;
+  text-decoration: none;
+}
+
+.FooterLeft {
+  display: flex;
+  align-items: center;
+  width: 700px;
+  min-width: 600px;
+}
+
+.FooterRight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 400px;
+}
+
+.Logo {
+  padding-right: 30px;
+  font-size: 40px;
+  color: $orange;
+  font-family: 'Merriweather', serif;
+}
+
+.sessionbuttons .header-group{
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+
+.Register, .sell-link {
+  font-size: 15px;
+  color: $orange;
+  background-color: white;
+  border: 0px;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.Register:hover, .sell-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  margin: 10px;
+}
+
+.SignIn, .logout{
+  font-size: 15px;
+  color: $orange;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border: 1px solid $orange;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.logout:hover, .SignIn:hover{
+  background-color: $lightorange;
+  cursor: pointer;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.fa.fa-shopping-cart {
+  font-size: 20px;
+  color: grey;
+  text-decoration: none;
+}
+
+.cart-label {
+  color: $darkgrey;
+  margin-top: 3px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.search-form:focus {
+}
+
+.search-form {
+  .search-input {
+    padding-left: 5px;
+    height: 24px;
+    font-size: 15px;
+    width: 300px;
+
+  }
+
+  .search-input:focus {
+    outline: 1px solid $orange;
+  }
+
+  .search-submit {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    height: 30px;
+    font-size: 15px;
+    background-color: $orange;
+    color: white;
+    width: 70px;
+    right: 5px;
+    position: relative;
+  }
+  .search-submit:focus {
+    outline: none;
+  }
+}
