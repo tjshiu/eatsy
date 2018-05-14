@@ -36,7 +36,8 @@
 
 .product-form-container input:focus, textarea:focus{
   outline: none;
-  border:1px solid $darkgrey;
+  border:1px solid $orange;
+  box-shadow: 0 0 5px $orange;
   padding-left: 10px;
   padding-top: 3px;
 }

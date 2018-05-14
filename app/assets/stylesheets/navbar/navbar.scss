@@ -120,11 +120,13 @@ header {
   }
 
   .search-input:focus {
-    outline: 1px solid $orange;
+    border: 1px solid $orange;
+    box-shadow: 0 0 5px $orange;
   }
 
   .search-submit {
     padding-top: 3px;
+    border: 1px solid $orange;
     padding-bottom: 3px;
     height: 30px;
     font-size: 15px;
