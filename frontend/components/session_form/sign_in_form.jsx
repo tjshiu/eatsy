@@ -33,7 +33,7 @@ class SignInForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className='session-errors'>
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>{error}</li>
         ))}
@@ -81,9 +81,8 @@ class SignInForm extends React.Component {
                       />
                   </div>
                 </label>
-                <br />
                 <label>
-                  Password
+                  Password:
                   <div>
                     <input
                       type="password"
@@ -93,7 +92,6 @@ class SignInForm extends React.Component {
                       />
                   </div>
                 </label>
-              <br />
               <input
                 className="session-submit"
                 type="submit"

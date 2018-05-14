@@ -6,9 +6,11 @@
 
 .form-nav {
   border-bottom: 1px solid lightgrey;
-  padding-left: 20px;
+  padding-left: 40px;
   padding-top: 30px;
-  background-color: $lightgrey;
+  background-color: $superlightgrey;
+  border-top-left-radius:  10px;
+  border-top-right-radius: 10px;
 }
 
 .other-button, .the-form-button {
@@ -25,7 +27,7 @@
 }
 
 .other-button {
-  background-color: $lightgrey;
+  background-color: $superlightgrey;
 }
 
 .the-form-button {
@@ -34,7 +36,8 @@
 }
 
 .login-form-container {
-  padding-left: 30px;
+  padding-left: 42px;
+  padding-bottom: 30px;
 }
 
 .errors-container {
@@ -50,16 +53,16 @@
   background-color: white;
   width: 10px;
   position: absolute;
-  bottom: -5px;
-  top: 25px;
+  top: 34px;
 }
 
 .demo-button-container {
   margin-top: 20px;
-  padding-left: 30px;
+  padding-left: 42px;
   padding-bottom: 20px;
   border-bottom: 1px solid $lightgrey;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .whole-form {
@@ -67,7 +70,7 @@
   background: white;
   width: 400px;
   padding-bottom: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .login-form-box {
@@ -81,12 +84,17 @@
 
 
 .session-submit, .demo-button{
-  width: 60%;
+  width: 300px;
   background: $orange;
   color: white;
   font-size: 18px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 5px;
+}
+
+.session-submit:hover, .demo-button:hover {
+  cursor: pointer;
 }
 
 .session-submit:focus, .demo-button:focus {
@@ -110,7 +118,23 @@
 .login-input {
   margin-bottom: 10px;
   padding-left: 5px;
-  font-size: 18px;
-  margin-top: 5px;
-  width: 60%;
+  font-size: 15px;
+  margin-top: 3px;
+  width: 290px;
+  border: 1px solid lightgrey;
+  padding-top: 3px;
+  padding-bottom: 4px;
+}
+
+.login-input:focus {
+  border: 1px solid $orange;
+  box-shadow: 0 0 5px $orange;
+}
+
+.session-errors li {
+  color: red;
+}
+
+.session-errors {
+  margin-bottom: 15px;
 }

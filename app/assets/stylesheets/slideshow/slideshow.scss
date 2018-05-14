@@ -47,10 +47,23 @@
 .slider {
   height: 50vh;
   width: 100%;
+  border: none;
+  outline: none;
+}
+
+.slider:focus {
+  border: none;
+  outline: none;
+}
+
+.SliderContainer:focus {
+  border: none;
+  outline: none;
 }
 
 .SliderContainer {
   display: block;
+  border: none;
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 20px;

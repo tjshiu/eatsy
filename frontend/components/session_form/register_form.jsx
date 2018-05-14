@@ -34,7 +34,7 @@ class RegisterForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className='session-errors'>
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>{error}</li>
         ))}
@@ -82,8 +82,7 @@ class RegisterForm extends React.Component {
                     />
                 </div>
               </label>
-              <br />
-              <label>Email
+              <label>Email:
                 <div>
                   <input
                     type="text"
@@ -93,9 +92,8 @@ class RegisterForm extends React.Component {
                     />
                 </div>
               </label>
-              <br />
               <label>
-                Password
+                Password:
                 <div>
                   <input
                     type="password"
@@ -105,7 +103,6 @@ class RegisterForm extends React.Component {
                     />
                 </div>
               </label>
-              <br />
               <input
                 className="session-submit"
                 type="submit"

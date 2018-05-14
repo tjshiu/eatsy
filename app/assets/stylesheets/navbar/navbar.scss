@@ -107,7 +107,8 @@ header {
   text-decoration: none;
 }
 
-.search-form:focus {
+.header-name:hover {
+  text-decoration: underline;
 }
 
 .search-form {
@@ -117,6 +118,8 @@ header {
     font-size: 15px;
     width: 300px;
     border: 1px solid $lightgrey;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
   }
 
   .search-input:focus {
@@ -132,9 +135,11 @@ header {
     font-size: 15px;
     background-color: $orange;
     color: white;
-    width: 70px;
+    width: 80px;
     right: 5px;
     position: relative;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
   .search-submit:focus {
     outline: none;
