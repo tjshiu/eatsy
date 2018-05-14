@@ -29,6 +29,7 @@ const homepage = () => (
         <div>We use a secure transaction with our latest technological advancements.</div>
       </div>
     </div>
+    <HomePageIndexContainer />
     <div className='productsLinkContainer'>
       <Link className='productsLink' to='/products'>See All Food ></Link>
     </div>
