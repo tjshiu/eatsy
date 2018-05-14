@@ -62,7 +62,7 @@ class ProductForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className="product-errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>{error}</li>
         ))}
@@ -165,7 +165,7 @@ class ProductForm extends React.Component {
                 id="cost"
                 type="number"
                 min="0.00"
-                max="999999999999.99"
+                max="99999999.99"
                 step="0.01"
                 value={this.state.cost}
                 onChange={this.update("cost")}
@@ -173,7 +173,7 @@ class ProductForm extends React.Component {
               <div className="required"> *</div>
             </label>
             <br />
-            <input id="form-submit" type="submit" value={this.props.formType} />
+            <input id="product-form-submit" type="submit" value={this.props.formType} />
           </form>
         </div>
       </div>

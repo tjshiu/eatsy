@@ -49,11 +49,11 @@
 }
 
 .product-form-overview {
-  height: 100px;
+  height: 70px;
 }
 
 .product-form-description {
-  height: 200px;
+  height: 130px;
 }
 #cost {
   width: 200px;
@@ -61,10 +61,6 @@
   margin-left: 10px;
 }
 
-#form-submit {
-  background-color: $orange;
-  color: white;
-}
 
 .whole-product-form h1 {
   text-align: center;
@@ -75,6 +71,8 @@
 .whole-product-form {
   padding-top: 20px;
   margin-bottom: 20px;
+  height: 100%;
+  background-color: $superlightgrey;
 }
 
 .drop-zone-instructions {
@@ -143,4 +141,16 @@
   flex-direction: column;
   width: 50%;
   margin-left: 20px;
+}
+
+.product-errors li {
+  color: red;
+}
+
+#product-form-submit {
+  background-color: $orange;
+  color: white;
+  padding-top: 7px;
+  padding-bottom: 10px;
+  height: 30px;
 }
