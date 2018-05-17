@@ -37,7 +37,7 @@ class ShoppingCart extends React.Component {
             )}
             <Link className='keepShopping' to="/products">Keep Shopping ></Link>
           </nav>
-
+          <div className='flex-whole-shopping-cart'>
           <div className='whole-shopping-cart'>
             {this.props.items.length === 0 ? (
               <div className='no-items'>
@@ -60,7 +60,10 @@ class ShoppingCart extends React.Component {
                 </div>
                 <div className="checkout-container">
                   <div className="checkout">
-                    <div>Item(s) Total: ${totalSum.toFixed(2)}</div>
+                    <div className='checkout-cost'>
+                      <div>Item(s) Total: </div>
+                      <div> ${totalSum.toFixed(2)}</div>
+                    </div>
                     <button
                       onClick={() =>
                         this.props.checkout(this.props.user.shoppingCartItemsIds)
@@ -73,6 +76,7 @@ class ShoppingCart extends React.Component {
             )}
 
           </div>
+        </div>
       </div>
     );
   }

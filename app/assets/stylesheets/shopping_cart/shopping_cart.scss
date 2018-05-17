@@ -5,6 +5,9 @@
   width: 100%;
   min-width: 1100px;
   height: 100%;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 
   .no-items {
     display: flex;
@@ -30,16 +33,23 @@
     font-size: 25px;
   }
 
+  .flex-whole-shopping-cart {
+    display: flex;
+    justify-content: center;
+  }
+
   .whole-shopping-cart {
     margin-left: 10%;
     margin-right: 10%;
     background-color: white;
+    height: 100%;
     min-width: 1100px;
     display: flex;
-    // border: 1px solid lightgrey;
     justify-content: center;
     margin-bottom: 100px;
     box-shadow: 0 0 5px grey;
+    max-width: 1200px;
+    align-content: center;
   }
 
   .shopping-cart-with-items {
@@ -223,28 +233,31 @@
   }
 
   .checkout-container {
-    height: 100%;
     width: 100%;
     min-width: 200px;
-    padding: 30px;
-    // border: 1px solid red;
+    height: 100%;
+  }
+
+  .checkout-cost {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .checkout {
-    // border: 1px solid blue;
+    padding: 20px;
     height: 100%;
-    width: 100%;
-    padding-top: 30px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     background-color: white;
+    margin-top: 30px;
+
 
     div {
-      text-align: center;
       font-size: 20px;
-      margin-bottom: 20px
     }
 
     button {
@@ -254,5 +267,10 @@
       background-color: $orange;
       height: 30px;
       color: white;
+    }
+
+    button:hover {
+      background-color: $orangehover;
+      cursor: pointer;
     }
   }
