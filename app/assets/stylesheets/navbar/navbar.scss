@@ -114,18 +114,19 @@ header {
 
 .search-form {
   .search-input {
-    padding-left: 5px;
+    padding-left: 7px;
     height: 26px;
     font-size: 15px;
-    width: 300px;
+    width: 350px;
     border: 1px solid $lightgrey;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    background-color: $superlightgrey;
   }
 
   .search-input:focus {
-    border: 1px solid $orange;
-    box-shadow: 0 0 5px $orange;
+    border: 1px solid grey;
+    background-color: white;
   }
 
   .search-submit {

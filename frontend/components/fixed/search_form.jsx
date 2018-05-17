@@ -33,7 +33,7 @@ class SearchForm extends React.Component {
     <div>
       <form onSubmit={this.handleSubmit} className='search-form'>
         <input
-          placeholder='Search Food'
+          placeholder='Search for Food'
           type="text"
           value={this.state.product_name}
           onChange={this.update("product_name")}
