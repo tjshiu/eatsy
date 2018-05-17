@@ -45,29 +45,33 @@ class ShoppingCart extends React.Component {
                 <div>No Items in your Cart</div>
               </div>
             ) : (
-              <div className='item-container'>
-                <ul>
-                  {this.props.items.map(item => (
-                    <ShoppingCartItem
-                      key={`shopping-cart-item-${item.id}`}
-                      delete={this.props.removeProduct}
-                      item={item}
-                      update={this.props.update}
-                      products={this.props.products}
-                    />))}
-                </ul>
+              <div className='shopping-cart-with-items'>
+                <div className='item-container'>
+                  <ul>
+                    {this.props.items.map(item => (
+                      <ShoppingCartItem
+                        key={`shopping-cart-item-${item.id}`}
+                        delete={this.props.removeProduct}
+                        item={item}
+                        update={this.props.update}
+                        products={this.props.products}
+                      />))}
+                  </ul>
+                </div>
+                <div className="checkout-container">
+                  <div className="checkout">
+                    <div>Item(s) Total: ${totalSum.toFixed(2)}</div>
+                    <button
+                      onClick={() =>
+                        this.props.checkout(this.props.user.shoppingCartItemsIds)
+                      }>
+                      Checkout
+                    </button>
+                  </div>
+                </div>
               </div>
             )}
 
-            <div className="checkout-container">
-              <div>Item(s) Total: ${totalSum.toFixed(2)}</div>
-              <button
-                onClick={() =>
-                  this.props.checkout(this.props.user.shoppingCartItemsIds)
-                }>
-                Checkout
-              </button>
-            </div>
           </div>
       </div>
     );
