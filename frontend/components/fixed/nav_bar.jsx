@@ -49,9 +49,7 @@ class NavBar extends React.Component {
   }
 
   Greeting() {
-    return this.props.currentUser
-      ? this.personalGreeting()
-      : this.sessionLinks();
+    return this.props.currentUser ? this.personalGreeting() : this.sessionLinks();
   }
 
   render() {

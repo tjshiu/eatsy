@@ -88,6 +88,10 @@ header {
   cursor: pointer;
 }
 
+.SignIn:focus, .logout:focus {
+  outline: none;
+}
+
 .cart {
   display: flex;
   flex-direction: column;
