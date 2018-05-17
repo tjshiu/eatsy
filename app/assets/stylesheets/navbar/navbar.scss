@@ -150,4 +150,9 @@ header {
   .search-submit:focus {
     outline: none;
   }
+
+  .search-submit:hover {
+    background-color: $orangehover;
+    cursor: pointer;
+  }
 }
