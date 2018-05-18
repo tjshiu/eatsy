@@ -13,6 +13,9 @@ class NavBar extends React.Component {
   sessionLinks() {
     return (
       <React.Fragment>
+        <Link className="sell-link" to="/products/new" className="Register">
+          Sell on Eatsy
+        </Link>
         <button
           className="Register"
           onClick={() => this.props.openModal("register")}
@@ -34,17 +37,22 @@ class NavBar extends React.Component {
 
   personalGreeting() {
     return (
-      <React.Fragment>
+      <div className='right-with-buttons'>
+        <Link className="sell-link" to="/products/new" className="Register">
+          Sell on Eatsy
+        </Link>
         <Link
           to={`/users/${this.props.currentUser.id}`}
           className="header-name"
         >
-          Hi, {this.props.currentUser.username}!
+            <i className="fa fa-user-circle" aria-hidden="true"></i>
+            <div className='nav-user-show-label'>You</div>
         </Link>
         <button className="logout" onClick={this.props.logout}>
-          Log Out
+          <i className="fa fa-sign-out-alt" aria-hidden="true"></i>
+          <div className='nav-button-logout-label'>Log out</div>
         </button>
-      </React.Fragment>
+      </div>
     );
   }
 
@@ -63,9 +71,6 @@ class NavBar extends React.Component {
             <SearchForm search={this.props.searchProducts} />
           </div>
           <div className="NavBarRight">
-            <Link className="sell-link" to="/products/new" className="Register">
-              Sell on Eatsy
-            </Link>
             {this.Greeting()}
             <Link to="/shoppingcart" className="cart">
               <i className="fa fa-shopping-cart" aria-hidden="true" />

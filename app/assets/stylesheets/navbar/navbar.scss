@@ -23,12 +23,6 @@ header {
   margin-right: 4%;
 }
 
-.header-name {
-  font-size: 17px;
-  color: $orange;
-  text-decoration: none;
-}
-
 .NavBarLeft {
   display: flex;
   align-items: center;
@@ -41,6 +35,13 @@ header {
   justify-content: space-between;
   align-items: center;
   min-width: 400px;
+}
+
+.right-with-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 350px;
 }
 
 .Logo {
@@ -62,7 +63,13 @@ header {
   background-color: white;
   border: 0px;
   text-decoration: none;
-  margin: 10px;
+  margin: 20px;
+}
+
+.header-name {
+  margin-right: 20px;
+  margin-left: 10px;
+  padding-bottom: 3px;
 }
 
 .Register:hover, .sell-link:hover {
@@ -71,7 +78,7 @@ header {
   margin: 10px;
 }
 
-.SignIn, .logout{
+.SignIn {
   font-size: 15px;
   color: $orange;
   padding-left: 10px;
@@ -80,10 +87,11 @@ header {
   padding-bottom: 7px;
   border: 1px solid $orange;
   border-radius: 5px;
-  margin: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-.logout:hover, .SignIn:hover{
+.SignIn:hover{
   background-color: $lightorange;
   cursor: pointer;
 }
@@ -92,24 +100,61 @@ header {
   outline: none;
 }
 
-.cart {
+.cart, .nav-user-show {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   text-decoration: none;
+  margin: 10px;
 }
 
-.fa.fa-shopping-cart {
+.logout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 60px;
+  padding-bottom: 3px;
+}
+
+.logout:hover {
+  cursor: pointer;
+}
+
+.fa.fa-shopping-cart, .fa.fa-sign-out-alt {
   font-size: 20px;
   color: grey;
   text-decoration: none;
 }
 
-.cart-label {
+.fa.fa-sign-out-alt {
+  font-size: 22px;
+}
+
+
+.fa.fa-user-circle {
+  font-size: 23px;
+  color: $orange;
+  text-decoration: none;
+}
+
+.nav-user-show-label {
+  color: $orange;
+  margin-top: 2px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.cart-label, .nav-button-logout-label {
   color: $darkgrey;
   margin-top: 3px;
   font-size: 14px;
   text-decoration: none;
+}
+
+.nav-botton-logout-label {
+  margin-top: none;
 }
 
 .header-name:hover {
