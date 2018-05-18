@@ -76,6 +76,7 @@ class NavBar extends React.Component {
               <i className="fa fa-shopping-cart" aria-hidden="true" />
               <div className="cart-label">Cart</div>
             </Link>
+            <div></div>
           </div>
         </nav>
       </div>
