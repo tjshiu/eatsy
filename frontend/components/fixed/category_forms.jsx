@@ -8,28 +8,30 @@ class CategoryForm extends React.Component {
 
   render() {
     return (
-    <div className='category-nav-Container'>
-      <nav className='category-nav'>
-        <button onClick={() => this.props.category('Drink').then(this.props.history.push(`/category/Drinks`))}>
-        Drinks
-        </button>
-        <button onClick={() => this.props.category('Breakfast').then(this.props.history.push(`/category/Breakfast`))}>
-        Breakfast
-        </button>
-        <button onClick={() => this.props.category('Lunch').then(this.props.history.push(`/category/Lunch`))}>
-        Lunch
-        </button>
-        <button onClick={() => this.props.category('Dinner').then(this.props.history.push(`/category/Dinner`))}>
-        Dinner
-        </button>
-        <button onClick={() => this.props.category('Snack').then(this.props.history.push(`/category/Snacks`))}>
-        Snacks
-        </button>
-        <button onClick={() => this.props.category('Dessert').then(this.props.history.push(`/category/Desserts`))}>
-        Desserts
-        </button>
-      </nav>
-    </div>
+      <div className="category-nav-Container">
+        <nav className="category-nav">
+          <button onClick={() => this.props.history.push(`/category/Drink`)}>
+            Drinks
+          </button>
+          <button
+            onClick={() => this.props.history.push(`/category/Breakfast`)}
+          >
+            Breakfast
+          </button>
+          <button onClick={() => this.props.history.push(`/category/Lunch`)}>
+            Lunch
+          </button>
+          <button onClick={() => this.props.history.push(`/category/Dinner`)}>
+            Dinner
+          </button>
+          <button onClick={() => this.props.history.push(`/category/Snack`)}>
+            Snacks
+          </button>
+          <button onClick={() => this.props.history.push(`/category/Dessert`)}>
+            Desserts
+          </button>
+        </nav>
+      </div>
     );
   }
 }
