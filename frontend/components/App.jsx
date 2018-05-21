@@ -38,6 +38,7 @@ const App = () => (
         <Route path="/users/:userId" component={UserShowContainer} />
         <Route path="/products" component={ProductIndexContainer} />
         <Route path="/search" component={ProductIndexContainer} />
+        <Route path="/category/:type" component={ProductIndexContainer} />
         <Route path="/" component={Homepage} />
         <Route component={Homepage} />
       </Switch>

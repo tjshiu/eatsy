@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       delete "delete_collection", on: :collection
     end
     resources :search, only: [:index]
+    resources :category, only: [:index] 
   end
 
   root "static_pages#root"
