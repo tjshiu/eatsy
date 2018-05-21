@@ -15,7 +15,7 @@
 
 class Product < ApplicationRecord
   validates :user_id, :product_name, :overview, :description, :cost, :image_url, :category, presence: true
-  validates_inclusion_of :category, :in => ["Drinks", "Breakfast", "Lunch", "Dinner", "Snacks", "Desserts"]
+  validates_inclusion_of :category, :in => ["Drink", "Breakfast", "Lunch", "Dinner", "Snack", "Dessert"]
 
   belongs_to :seller,
     foreign_key: :user_id,

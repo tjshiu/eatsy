@@ -9,7 +9,7 @@ class ProductIndex extends React.Component {
   }
 
   componentDidMount() {
-    if(this.props.match.path !== '/search') {
+    if(this.props.match.path === '/products') {
       this.props.fetchProducts().then(() => this.setState({firstLoad: false} ));
     } else {
       this.setState({firstLoad: false});

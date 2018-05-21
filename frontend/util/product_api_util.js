@@ -38,3 +38,11 @@ export const productSearch = (product_name) => (
     data: { search: {product_name }}
   })
 );
+
+export const productCategory = (type) => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/category',
+    data: { category: { type }}
+  })
+);

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SearchForm from "./search_form";
+import CategoryForm from './category_forms';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -79,6 +80,7 @@ class NavBar extends React.Component {
             <div></div>
           </div>
         </nav>
+        <CategoryForm category={this.props.categoryProducts}/>
       </div>
     );
   }

@@ -9,7 +9,7 @@ import {
   deleteShoppingCartItem,
   deleteShoppingCartItems
 } from "./actions/shopping_cart_actions";
-import { deleteProduct, searchProducts } from "./actions/product_actions";
+import { deleteProduct, searchProducts, categoryProducts } from "./actions/product_actions";
 import { fetchUser } from "./actions/user_actions";
 import Root from "./components/root";
 
@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.deleteShoppingCartItem = deleteShoppingCartItem;
   window.deleteProduct = deleteProduct;
   window.deleteShoppingCartItems = deleteShoppingCartItems;
+  window.categoryProducts = categoryProducts;
   window.fetchUser = fetchUser;
   window.searchProducts = searchProducts;
 
