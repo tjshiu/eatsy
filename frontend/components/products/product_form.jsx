@@ -16,20 +16,24 @@ class ProductForm extends React.Component {
       overview: "",
       description: "",
       image_url: "",
+      category: "",
       cost: 0.0
     };
   }
 
   componentDidMount() {
     if (this.props.fetchProduct) {
-      this.props.fetchProduct(this.props.match.params.productId).then(() => this.setState({
-        product_name: this.props.product.productName,
-        overview: this.props.product.overview,
-        description: this.props.product.description,
-        image_url: this.props.product.imageUrl,
-        cost: this.props.product.cost,
-        id: this.props.product.id
-      }));
+      this.props.fetchProduct(this.props.match.params.productId).then(() => {
+        this.setState({
+          product_name: this.props.product.productName,
+          overview: this.props.product.overview,
+          description: this.props.product.description,
+          image_url: this.props.product.imageUrl,
+          cost: this.props.product.cost,
+          category: this.props.product.category,
+          id: this.props.product.id
+        });
+      });
     }
   }
 
@@ -84,7 +88,7 @@ class ProductForm extends React.Component {
     e.preventDefault();
     let productDetail = {};
     for (let key in this.state) {
-      if (key === "uploadedFile" || key ==='product') continue;
+      if (key === "uploadedFile" || key === "product") continue;
       productDetail[key] = this.state[key];
     }
     this.props
@@ -95,7 +99,6 @@ class ProductForm extends React.Component {
   }
 
   render() {
-
     return (
       <div className="whole-product-form">
         <h1>{this.props.formType}</h1>
@@ -120,7 +123,9 @@ class ProductForm extends React.Component {
                   <div>
                     <img src={this.state.image_url} />
                   </div>
-                  {(this.props.formType=== "Create A Product") ? <div>{this.state.uploadedFile.name}</div> : null}
+                  {this.props.formType === "Create A Product" ? (
+                    <div>{this.state.uploadedFile.name}</div>
+                  ) : null}
                 </div>
               )}
             </div>
@@ -160,6 +165,20 @@ class ProductForm extends React.Component {
               </div>
             </label>
             <label>
+              Category: <div className="required"> *</div>
+              <select
+                onChange={this.update("category")}
+                value={this.state.category}
+              >
+                <option value="Drink">Drink</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+                <option value="Snack">Snack</option>
+                <option value="Dessert">Dessert</option>
+              </select>
+            </label>
+            <label>
               Cost: $
               <input
                 id="cost"
@@ -173,7 +192,11 @@ class ProductForm extends React.Component {
               <div className="required"> *</div>
             </label>
             <br />
-            <input id="product-form-submit" type="submit" value={this.props.formType} />
+            <input
+              id="product-form-submit"
+              type="submit"
+              value={this.props.formType}
+            />
           </form>
         </div>
       </div>

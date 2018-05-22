@@ -12,19 +12,18 @@ class ProductShow extends React.Component {
     this.props.fetchProduct(this.props.match.params.productId);
   }
 
-  componentWillUnmount() {
-  }
-
   render() {
     if (this.props.product && this.props.seller) {
       let otherProductsIds = Object.keys(this.props.products).filter(
-        id => (Number(id) !== Number(this.props.match.params.productId))
+        id => Number(id) !== Number(this.props.match.params.productId)
       );
       let otherProductsToFilter = otherProductsIds.map(
         id => this.props.products[parseInt(id)]
       );
 
-      let otherProducts = otherProductsToFilter.filter((object) => object.userId === this.props.seller.id);
+      let otherProducts = otherProductsToFilter.filter(
+        object => object.userId === this.props.seller.id
+      );
 
       return (
         <div className="whole-product-show">
@@ -38,12 +37,14 @@ class ProductShow extends React.Component {
             </Link>
             <div className="product-show-nav-right-side">
               <ul className="products-seller-items-container">
-                {otherProducts.slice(0, 4).map(product => (
-                  <ProductShowSellerItems
-                    key={`product-items-seller-${product.id}`}
-                    product={product}
-                  />
-                ))}
+                {otherProducts
+                  .slice(0, 4)
+                  .map(product => (
+                    <ProductShowSellerItems
+                      key={`product-items-seller-${product.id}`}
+                      product={product}
+                    />
+                  ))}
               </ul>
               <Link className="products-show-nav-Link" to="/products">
                 See All Food >

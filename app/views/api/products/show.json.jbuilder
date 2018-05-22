@@ -1,5 +1,5 @@
 json.product do
-  json.extract! @product, :id, :user_id, :product_name, :overview, :description, :cost
+  json.extract! @product, :id, :user_id, :product_name, :overview, :description, :cost, :category
   json.image_url asset_path(@product.image_url)
 end
 
@@ -20,6 +20,7 @@ json.products do
       json.description product.description
       json.cost product.cost
       json.image_url asset_path(product.image_url)
+      json.category product.category
       json.seller do
         json.extract! product.seller, :username, :image_url, :id
       end
