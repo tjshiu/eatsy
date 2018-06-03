@@ -79,24 +79,36 @@ product20= Product.create(product_name: "Fig Cocoa Smoothie",
 )
 
 
-product44= Product.create(product_name: "Tortellini",
-  overview: "Enjoy our tartellini filled with your choice of meats or cheeses.",
-  description: "We are a family of pasta makers where we specialize at making pastas from scratch.",
-  cost: 14.00,
-  image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1527026792/Tortelloni.jpg",
-  user_id: r.id,
-  category: "Dinner"
+
+
+product28= Product.create(product_name: "Honey and Pear Oats",
+  overview: "Sweet and Fruity Oats",
+  description: "Enjoy some oats for a quick and sweet breakfast",
+  cost: 10.00,
+  image_url: "https://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1527020931/honey_pear_oats.jpg",
+  user_id: m.id,
+  category: "Breakfast"
+)
+
+product14= Product.create(product_name: "Macaron and Tea",
+  overview: "Macarons and our favorite English Tea",
+  description: "These small delicate macaron's can be enjoyed with our favorite English Tea. We send you a dozen of our chef's favorite flavors for you to enjoy.",
+  cost: 19.99,
+  image_url: "https://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1522965914/macaron_and_tea.jpg",
+  user_id: h.id,
+  category: "Dessert"
+)
+
+product15= Product.create(product_name: "Macarons for Two or One",
+  overview: "Macarons made by Kristin",
+  description: "Enjoy our love inspired macarons. Our flavors are chocolate, strawberry, orange, and green tea. We send you a dozen of these love macarons, but we don't blame you if you just want to eat all for yourself",
+  cost: 19.99,
+  image_url: "https://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1522981606/macaron_love.jpg",
+  user_id: h.id,
+  category: "Dessert"
 )
 
 
-product40= Product.create(product_name: "Spanish Paella",
-  overview: "Enjoy this spanish paella with mixed meet and cooked in a dutch oven.",
-  description: "Healthy Life - Wealthy Life",
-  cost: 17.00,
-  image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1527022808/Spanish_Paella.jpg",
-  user_id: q.id,
-  category: "Lunch"
-)
 
 product1= Product.create(product_name: "Mama's Favorite Chocolate Cake",
   overview: "Two-tiered Chocolate Cake with our Award-winning white buttercream frosting",
@@ -136,6 +148,15 @@ product6 = Product.create(product_name: 'Raspberry Popsicles',
   category: "Dessert"
 )
 
+product7 = Product.create(product_name: 'Nutty-Dark-Chocolate Popsicles',
+  overview: "Made with Peanuts and our finest Dark Chocolate Cocoa Powder",
+  description: "Enjoy this decadent chocolate popsicle that anyone would enjoy. This is a fan favorite and our best selling item!",
+  cost: 7.99,
+  image_url: "https://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1522981611/nutty_chocolatey_popscicles.jpg",
+  user_id: e.id,
+  category: "Dessert"
+)
+
 product30= Product.create(product_name: "Classic Breakfast",
   overview: "Classic Breakfast, eggs any way you like with hashbrowns, toast, and sausage patties.",
   description: "We are a family who likes to host breakfasts and brunches. Every Sunday we create an enviornment where we eat with as a breakfast family.",
@@ -153,14 +174,7 @@ product31= Product.create(product_name: "Shakshuka",
   category: "Breakfast"
 )
 
-product7 = Product.create(product_name: 'Nutty-Dark-Chocolate Popsicles',
-  overview: "Made with Peanuts and our finest Dark Chocolate Cocoa Powder",
-  description: "Enjoy this decadent chocolate popsicle that anyone would enjoy. This is a fan favorite and our best selling item!",
-  cost: 7.99,
-  image_url: "https://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1522981611/nutty_chocolatey_popscicles.jpg",
-  user_id: e.id,
-  category: "Dessert"
-)
+
 
 product8 = Product.create(product_name: 'Fresh Citrus',
   overview: "Freshly Farmed Citrus Locally",
@@ -228,6 +242,8 @@ product22= Product.create(product_name: "Lemonade",
   user_id: a.id,
   category: "Drink"
 )
+
+
 product25= Product.create(product_name: "Fresh Squeezed Orange",
   overview: "We have fresh squeezed orange juice with a little bit of a lime kick",
   description: "We are a family of farmers that have been growing fresh citrus for years. We would love to share our farmed fruit varieties. Enjoy!",
@@ -263,14 +279,7 @@ product27= Product.create(product_name: "Cappuccino Social",
   user_id: l.id,
   category: "Drink"
 )
-product28= Product.create(product_name: "Honey and Pear Oats",
-  overview: "Sweet and Fruity Oats",
-  description: "Enjoy some oats for a quick and sweet breakfast",
-  cost: 10.00,
-  image_url: "https://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1527020931/honey_pear_oats.jpg",
-  user_id: m.id,
-  category: "Breakfast"
-)
+
 product28= Product.create(product_name: "Cinnamon Sugar Walnut Oat Waffles",
   overview: "Sweet, nutty, and full of spice waffles",
   description: "Enjoy our homemade oat waffles for a quick and sweet breakfast",
@@ -289,6 +298,15 @@ product47= Product.create(product_name: "Bibimbap",
   category: "Dinner"
 )
 
+product44= Product.create(product_name: "Tortellini",
+  overview: "Enjoy our tartellini filled with your choice of meats or cheeses.",
+  description: "We are a family of pasta makers where we specialize at making pastas from scratch.",
+  cost: 14.00,
+  image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1527026792/Tortelloni.jpg",
+  user_id: r.id,
+  category: "Dinner"
+)
+
 product29= Product.create(product_name: "Persimmon and Sweet Raisin Oats",
   overview: "Sweet and Fruity Oats",
   description: "Enjoy some oats for a quick and sweet breakfast",
@@ -296,6 +314,15 @@ product29= Product.create(product_name: "Persimmon and Sweet Raisin Oats",
   image_url: "https://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1527020928/seasonal_oatmeal.jpg",
   user_id: m.id,
   category: "Breakfast"
+)
+
+product40= Product.create(product_name: "Spanish Paella",
+  overview: "Enjoy this spanish paella with mixed meet and cooked in a dutch oven.",
+  description: "Healthy Life - Wealthy Life",
+  cost: 17.00,
+  image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1527022808/Spanish_Paella.jpg",
+  user_id: q.id,
+  category: "Lunch"
 )
 
 
@@ -372,23 +399,7 @@ product39= Product.create(product_name: "Spinach Salad",
   category: "Lunch"
 )
 
-product14= Product.create(product_name: "Macaron and Tea",
-  overview: "Macarons and our favorite English Tea",
-  description: "These small delicate macaron's can be enjoyed with our favorite English Tea. We send you a dozen of our chef's favorite flavors for you to enjoy.",
-  cost: 19.99,
-  image_url: "https://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1522965914/macaron_and_tea.jpg",
-  user_id: h.id,
-  category: "Dessert"
-)
 
-product15= Product.create(product_name: "Macarons for Two or One",
-  overview: "Macarons made by Kristin",
-  description: "Enjoy our love inspired macarons. Our flavors are chocolate, strawberry, orange, and green tea. We send you a dozen of these love macarons, but we don't blame you if you just want to eat all for yourself",
-  cost: 19.99,
-  image_url: "https://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1522981606/macaron_love.jpg",
-  user_id: h.id,
-  category: "Dessert"
-)
 product41= Product.create(product_name: "Pesto Bow Tie Pasta Salad",
   overview: "Refreshing fresh pesto on a bed of bow tie pasta and salad greens.",
   description: "Healthy Life - Wealthy Life",
@@ -431,7 +442,7 @@ product46= Product.create(product_name: "Simple Spaghetti",
   category: "Dinner"
 )
 
-product39= Product.create(product_name: "Season Salmon",
+product39= Product.create(product_name: "Seasoned Salmon",
   overview: "Enjoy this seasoned salmon on top of a bed of couscous and asparagus.",
   description: "Healthy Life - Wealthy Life",
   cost: 20.00,
@@ -506,15 +517,6 @@ product54= Product.create(product_name: "Candied Pecans",
   category: "Snack"
 )
 
-product3 = Product.create(product_name: 'Naked Citrus Cake',
-  overview: "Naked Citrus Cake with fruit from the citrus farmer",
-  description: "Enjoy this homemade naked cake. It has our award-winning white buttercream frosting. We send the cake within 1 business day and will arrive depending on how far you live.",
-  cost: 19.99,
-  image_url: "https://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1522981611/naked_cake.jpg",
-  user_id: d.id,
-  category: "Dessert"
-)
-
 
 
 
@@ -526,7 +528,6 @@ product3 = Product.create(product_name: 'Naked Citrus Cake',
 
 
 shopping1 = ShoppingCartItem.create(user_id: e.id, product_id: product1.id, quantity: 1);
-shopping2 = ShoppingCartItem.create(user_id: e.id, product_id: product3.id, quantity: 1);
 shopping5 = ShoppingCartItem.create(user_id: a.id, product_id: product9.id, quantity: 1);
 shopping6 = ShoppingCartItem.create(user_id: a.id, product_id: product10.id, quantity: 2);
 shopping7 = ShoppingCartItem.create(user_id: a.id, product_id: product8.id, quantity: 1);
