@@ -444,7 +444,8 @@ product48= Product.create(product_name: "Seafood Noodles",
   overview: "Our Filipino style seafood noodles with spices",
   description: "We like to help you travel the world with our food.",
   cost: 14.00,
-  image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1527026772/Gnocchi.jpg",
+  image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1527026784/Seafood_Noodles.jpg",
+
   user_id: s.id,
   category: "Dinner"
 )
@@ -452,7 +453,7 @@ product49= Product.create(product_name: "Gnocchi",
   overview: "Try our homemade gnocchi that can be accompanied with a variety of sauces.",
   description: "We like to help you travel the world with our food.",
   cost: 14.00,
-  image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1527026784/Seafood_Noodles.jpg",
+  image_url: "http://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_700/v1527026772/Gnocchi.jpg",
   user_id: s.id,
   category: "Dinner"
 )
