@@ -108,12 +108,13 @@
 .product-image-upload Dropzone {
 }
 
-.product-form-container img{
-  max-width: 100%;
+.product-image-upload img{
   height: 400px;
+  max-width: 100%;
   object-fit: contain;
   margin-top: 20px;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 .fa.fa-camera {
