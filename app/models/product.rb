@@ -24,10 +24,10 @@ class Product < ApplicationRecord
 
   has_many :shopping_cart_items, dependent: :destroy
 
-  def self.top_ten_results(query_params)
+  def self.top_twelve_results(query_params)
     return Product.all if query_params == ""
     param = "%" + query_params.split("").join("%").downcase + '%'
 
-    @products = Product.where('lower(product_name) LIKE ?', param).limit(10).to_a
+    @products = Product.where('lower(product_name) LIKE ?', param).limit(12).to_a
   end
 end
