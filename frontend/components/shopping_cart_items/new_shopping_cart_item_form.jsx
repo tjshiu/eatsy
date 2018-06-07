@@ -27,6 +27,7 @@ class NewShoppingCartItemForm extends React.Component {
       this.props.match.params.productId !== nextProps.match.params.productId
     ) {
       this.props.clearErrors();
+      this.setState({ product_id: nextProps.match.params.productId, quantity: 1});
     }
   }
 
@@ -52,7 +53,7 @@ class NewShoppingCartItemForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
+    console.log(this.state);
     if (this.props.itemInCart) {
       let newState = Object.assign({}, this.state);
       newState.quantity =

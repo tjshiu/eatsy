@@ -8,6 +8,14 @@ class ProductShow extends React.Component {
     super(props);
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.match.params !== this.props.match.params) {
+      console.log("update");
+      this.props.fetchProduct(this.props.match.params.productId);
+      console.log(this.props.product.id);
+    }
+  }
+
   componentDidMount() {
     this.props.fetchProduct(this.props.match.params.productId);
   }
@@ -65,7 +73,7 @@ class ProductShow extends React.Component {
               <h1>{this.props.product.productName}</h1>
               <div>
                 <NewShoppingCartItemContainer
-                  productId={this.props.product.id}
+                  productId={this.props.match.params.productId}
                   itemCost={this.props.product.cost}
                 />
               </div>
