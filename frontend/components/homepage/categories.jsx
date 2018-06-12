@@ -10,14 +10,14 @@ const Categories = () => {
         <li className="homepage items">
           <ul>
             <li><Link to={`/category/Drink`}><img className='homepage productImg'
-              src={"https://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_324/v1528784151/drinks.jpg"}/></Link></li>
+              src={"https://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_400/v1528824132/drinks2.jpg"}/></Link></li>
             <li className='home productName'><Link to={`/category/Drink`} className="home productName">Drinks</Link></li>
           </ul>
         </li>
         <li className="homepage items">
           <ul>
             <li><Link to={`/category/Breakfast`}><img className='homepage productImg'
-              src={"https://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_400/v1528784153/bfast.jpg"}/></Link></li>
+              src={"https://res.cloudinary.com/dwanjkcku/image/upload/c_scale,w_400/v1528823978/bfast3.jpg"}/></Link></li>
             <li className='home productName'><Link to={`/category/Breakfast`} className="home productName">Breakfast</Link></li>
           </ul>
         </li>
