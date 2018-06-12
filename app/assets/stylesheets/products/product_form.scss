@@ -70,8 +70,9 @@
 
 .whole-product-form {
   padding-top: 20px;
-  margin-bottom: 20px;
-  height: 100%;
+  padding-bottom: 60px;
+  min-height: calc(100vh - 275px);
+  background-color: $superlightgrey;
 }
 
 .drop-zone-instructions {
