@@ -1,5 +1,10 @@
 @import 'base/global.scss';
 
+input {
+  border: 1px solid lightgrey;
+  font-size: 12px;
+}
+
 .whole-product-show {
   margin-left: 10%;
   margin-right: 10%;
@@ -133,7 +138,7 @@
   #create-new-item-submit:hover {
     cursor: pointer;
   }
-  
+
   .shopping-errors {
     font-size: 15px;
     text-align: center;
