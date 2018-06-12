@@ -53,7 +53,6 @@ class NewShoppingCartItemForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
     if (this.props.itemInCart) {
       let newState = Object.assign({}, this.state);
       newState.quantity =
