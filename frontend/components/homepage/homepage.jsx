@@ -32,7 +32,7 @@ const homepage = () => (
     </div>
     <div className="popular-now">Popular right now</div>
     <HomePageIndexContainer />
-    <div className="popular-now">Shop by category</div>
+    <div className="shopCategory">Shop by category</div>
     <Categories />
     <div className='productsLinkContainer'>
       <Link className='productsLink' to='/products'>See All Food ></Link>

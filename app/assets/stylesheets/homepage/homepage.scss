@@ -15,6 +15,7 @@
   margin-left: 4%;
   margin-right: 4%;
   display: flex;
+  margin-bottom: 30px;
 }
 
 .home-product-list {
@@ -112,7 +113,15 @@
   text-align: center;
   font-size: 25px;
   color: $darkgrey;
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.shopCategory {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 25px;
+  color: $darkgrey;
   margin-bottom: 30px;
 }
 
