@@ -2,6 +2,7 @@ import React from "react";
 import Slideshow from "../slideshow/slideshow";
 import HomePageIndexContainer from './homepage_container';
 import { Link } from 'react-router-dom';
+import Categories from './categories';
 
 const homepage = () => (
   <div>
@@ -31,6 +32,8 @@ const homepage = () => (
     </div>
     <div className="popular-now">Popular right now</div>
     <HomePageIndexContainer />
+    <div className="popular-now">Shop by category</div>
+    <Categories />
     <div className='productsLinkContainer'>
       <Link className='productsLink' to='/products'>See All Food ></Link>
     </div>
