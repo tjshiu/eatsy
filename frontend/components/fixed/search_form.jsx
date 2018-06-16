@@ -22,8 +22,8 @@ class SearchForm extends React.Component {
     e.preventDefault();
     this.props.search(this.state.product_name)
     .then((products) => {
-      this.setState({product_name: ""});
       this.props.history.push("/search");
+      this.setState({product_name: ""});
     });
   }
 

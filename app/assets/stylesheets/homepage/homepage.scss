@@ -28,12 +28,25 @@
   margin-top: 10px;
   display: flex;
   width: 15.2%;
-  border: 1px solid lightgrey;
-  padding: 3px;
 }
 
-.homepage.items:hover {
-  box-shadow: 0 0 5px grey;
+
+.homepage.items img:hover {
+  box-shadow: 0 0 10px grey;
+}
+
+.homepage.items.category {
+  border: 1px solid lightgrey;
+
+  img:hover {
+    box-shadow: none;
+  }
+}
+
+.homepage.items.category:hover {
+  li {
+    text-decoration: underline;
+  }
 }
 
 .homepage.items ul {
@@ -54,6 +67,11 @@
   margin-top: 6px;
   text-overflow: ellipsis;
   width: 100%;
+}
+
+.home.productName.category {
+  padding: 5px;
+  margin-top: 0px;
 }
 
 .home.productName:hover, .home.productSeller:hover {
