@@ -31,8 +31,10 @@
 }
 
 
-.homepage.items img:hover {
-  box-shadow: 0 0 10px grey;
+.homepage.items:hover {
+  img {
+    box-shadow: 0 0 10px grey;
+  }
 }
 
 .homepage.items.category {
@@ -129,18 +131,20 @@
 
 .popular-now {
   text-align: center;
-  font-size: 25px;
-  color: $darkgrey;
+  font-size: 26px;
+  color: black;
   margin-top: 20px;
   margin-bottom: 30px;
+  font-weight: 500;
 }
 
 .shopCategory {
-  margin-top: 80px;
+  margin-top: 70px;
   text-align: center;
-  font-size: 25px;
-  color: $darkgrey;
+  font-size: 27px;
+  color: black;
   margin-bottom: 30px;
+  font-weight: 500;
 }
 
 .productsLinkContainer {
