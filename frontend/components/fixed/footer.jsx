@@ -17,7 +17,9 @@ class NavBar extends React.Component {
             <p>We make it easy to find your food</p>
           </div>
           <div className="FooterRight" >
-            <div><i className="far fa-copyright"></i> 2018 Eatsy, Inc.</div>
+            <div>
+              <a className='tiffany-about' href="http://www.tiffanytech.com">Made by Tiffany Shiu</a>
+            </div>
             <a className='tiffany-links' href="https://github.com/tjshiu/eatsy">
               <img src="https://res.cloudinary.com/dwanjkcku/image/upload/v1526010598/GitHub-Mark-120px-plus.png" />
             </a>

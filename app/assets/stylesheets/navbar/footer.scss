@@ -85,3 +85,13 @@ header {
 .tiffany-links img {
   height: 30px;
 }
+
+.tiffany-about {
+  color: grey;
+  text-decoration: none;
+}
+
+.tiffany-about:hover {
+  color: black;
+  text-decoration: underline;
+}
