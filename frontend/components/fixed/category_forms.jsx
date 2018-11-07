@@ -13,9 +13,7 @@ class CategoryForm extends React.Component {
           <button onClick={() => this.props.history.push(`/category/Drink`)}>
             Drinks
           </button>
-          <button
-            onClick={() => this.props.history.push(`/category/Breakfast`)}
-          >
+          <button onClick={() => this.props.history.push(`/category/Breakfast`)}>
             Breakfast
           </button>
           <button onClick={() => this.props.history.push(`/category/Lunch`)}>

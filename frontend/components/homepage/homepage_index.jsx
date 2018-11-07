@@ -7,7 +7,6 @@ class ProductIndex extends React.Component {
     this.state = { products: []};
   }
 
-
   componentDidMount() {
     this.props.fetchProducts().then(() =>
       this.setState({ products: this.shuffle(this.props.products).slice(0, 6)})
@@ -15,12 +14,9 @@ class ProductIndex extends React.Component {
   }
 
   shuffle(array) {
-    var m = array.length, t, i;
-    // While there remain elements to shuffle…
+    let m = array.length, t, i;
     while (m) {
-      // Pick a remaining element…
       i = Math.floor(Math.random() * m--);
-      // And swap it with the current element.
       t = array[m];
       array[m] = array[i];
       array[i] = t;

@@ -22,13 +22,12 @@ class NewShoppingCartItemForm extends React.Component {
     this.props.fetchShoppingCartItems();
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (
-      this.props.match.params.productId !== nextProps.match.params.productId
-    ) {
+  shouldComponentUpdate(nextProps) {
+    if (this.props.match.params.productId !== nextProps.match.params.productId) {
       this.props.clearErrors();
       this.setState({ product_id: nextProps.match.params.productId, quantity: 1});
     }
+    return true;
   }
 
   componentWillUnmount() {

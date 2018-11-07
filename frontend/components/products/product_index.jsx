@@ -24,7 +24,9 @@ class ProductIndex extends React.Component {
     }
     let products = this.props.products.map(product => {
       return (
-        <ProductIndexItem key={`product-${product.id}`} product={product} />
+        <ProductIndexItem
+          key={`product-${product.id}`}
+          product={product} />
       );
     });
 
@@ -37,7 +39,6 @@ class ProductIndex extends React.Component {
       );
     }
 
-    // <div className="index-side-search">Search Box</div>
     return (
       <div className="indexContainer">
         <ul className="index-product-list">{products}</ul>

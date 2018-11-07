@@ -8,13 +8,14 @@ class UserShow extends React.Component {
     this.state = { firstLoad: true };
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.match.params.userId !== nextProps.match.params.userId) {
+  shouldComponentUpdate(newProps) {
+    if (this.props.match.params.userId !== newProps.match.params.userId) {
       this.props
-        .fetchUser(nextProps.match.params.userId)
-        .then(() => this.props.fetchProducts(nextProps.match.params.userId))
+        .fetchUser(newProps.match.params.userId)
+        .then(() => this.props.fetchProducts(newProps.match.params.userId))
         .then(() => this.setState({ firstLoad: false }));
     }
+    return true;
   }
 
   componentDidMount() {

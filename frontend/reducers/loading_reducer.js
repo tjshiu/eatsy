@@ -8,8 +8,3 @@ export default function loadingReducer(state = false, action) {
       return state;
   }
 }
-
-// case RECEIVE_CURRENT_USER:
-// return false;
-// case RECEIVE_SESSION_ERRORS:
-// return false;
